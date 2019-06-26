@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mMainMenuDetailsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/rlvDataContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"><!--Open visibility-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    app:cardElevation="5dp"
+                    app:contentPadding="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent">
+
+                        <RelativeLayout
+                            android:id="@+id/rltMenuImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:background="@android:color/transparent">
+
+                            <ImageView
+                                android:id="@+id/mImgMenuList"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/txtSpecialOffer"
+                                android:layout_width="100dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="-30dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/colorBlack"
+                                android:gravity="center"
+                                android:rotation="-50"
+                                android:text="Special"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="7dp"
+                                android:background="#99000000">
+
+                                <ImageView
+                                    android:id="@+id/iv_price_icon"
+                                    android:layout_width="25dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginTop="0dp"
+                                    android:src="@drawable/img_home_dlr"
+                                    android:visibility="gone" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_toLeftOf="@+id/txtFoodPrice"
+                                    android:background="@android:color/transparent">
+
+                                    <com.justtannoor.justtannoor.custom.TextViewHead
+                                        android:id="@+id/txtFoodNamePerson"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="2dp"
+
+                                        android:enabled="false"
+                                        android:focusable="false"
+                                        android:gravity="start|center_vertical"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="11sp" />
+
+                                    <com.justtannoor.justtannoor.custom.TextViewHead
+                                        android:id="@+id/txtFoodNamePersonARB"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_below="@+id/txtFoodNamePerson"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="2dp"
+
+                                        android:enabled="false"
+                                        android:focusable="false"
+                                        android:gravity="start|center_vertical"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="11sp" />
+
+                                </RelativeLayout>
+
+                                <com.justtannoor.justtannoor.custom.TextViewHead
+                                    android:id="@+id/txtFoodPrice"
+                                    android:layout_width="150dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginEnd="0dp"
+                                    android:background="@color/colorPrimary"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:gravity="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="11sp" />
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/srlDaynamivMainView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/rltMenuImageView"
+                            android:layout_marginBottom="10dp"
+                            android:background="@null">
+
+                            <LinearLayout
+                                android:id="@+id/lnrDaynamivMainView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.justtannoor.justtannoor.custom.TextViewHead
+            android:id="@+id/aAddToCartBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="@string/mAddToCartButtonText"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rlvNoDataFoundContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/colorWhite">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="40dp"
+                android:src="@drawable/no_internet" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@color/colorWhite">
+
+            <com.justtannoor.justtannoor.custom.TextViewHead
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/noDataFound"
+                android:textColor="@color/colorBlack"
+                android:textSize="18dp" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rlvNoInternetContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/colorWhite">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="40dp"
+                android:src="@drawable/no_internet" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@color/colorWhite">
+
+            <com.justtannoor.justtannoor.custom.TextViewHead
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/noInternetText"
+                android:textColor="@color/colorBlack"
+                android:textSize="18dp" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

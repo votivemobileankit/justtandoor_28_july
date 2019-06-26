@@ -1,0 +1,42 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <dimen name="BottomMenuCellHeight1">80dp</dimen>
+    <dimen name="BottomMenuCellHeight">70dp</dimen>
+    <dimen name="BottomMenuCellTopPadding">6dp</dimen>
+    <dimen name="BottomMenuCellBottomPadding">10dp</dimen>
+    <dimen name="BottomMenuCellLeftPadding">5dp</dimen>
+    <dimen name="BottomMenuCellRightPadding">5dp</dimen>
+    <dimen name="BottomMenuImageHeight">35dp</dimen>
+    <dimen name="BottomMenuImageWidth">35dp</dimen>
+    <dimen name="BottomMenuText">10sp</dimen>
+
+
+    <dimen name="notification_image_height">150dp</dimen>
+
+    <!-- Notification Menu -->
+    <dimen name="NotificationCustomLayoutWidth">40dp</dimen>
+    <dimen name="NotificationCustomLayoutHeight">40dp</dimen>
+    <dimen name="NotificationCustomTextWidth">14dp</dimen>
+    <dimen name="NotificationCustomTextHeight">14dp</dimen>
+    <dimen name="NotificationCustomImgHeight">24dp</dimen>
+    <dimen name="NotificationCustomImgWidth">24dp</dimen>
+
+    <dimen name="NotificationSubTextSize">7sp</dimen>
+
+
+    <dimen name="NormaltextSize">15sp</dimen>
+    <dimen name="item_offset">5dp</dimen>
+
+    <!--Menu page dimen-->
+
+    <dimen name="menu_next_privious_width">80dp</dimen>
+    <dimen name="menu_next_privious_height">80dp</dimen>
+
+</resources>

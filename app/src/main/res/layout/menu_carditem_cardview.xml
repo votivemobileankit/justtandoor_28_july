@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rlvMenuMainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:padding="6dp">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rlvBottomTextView"
+            android:layout_margin="1dp"
+            app:cardElevation="5dp"
+            app:contentPadding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                >
+
+                <ImageView
+                    android:id="@+id/mImgMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    />
+
+                <com.justtannoor.justtannoor.custom.TextViewHead
+                    android:id="@+id/txtSpecialOffer"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:background="@color/colorBlack"
+                    android:text="Special"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:rotation="-50"
+                    android:layout_marginStart="-30dp"
+                    android:layout_marginTop="15dp"
+                    android:visibility="gone"/>
+
+
+                <RelativeLayout
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/img_home_trns"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="7dp"
+                    >
+                    <ImageView
+                        android:id="@+id/iv_price_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/img_home_dlr"
+
+                        android:layout_marginTop="0dp"/>
+
+                    <com.justtannoor.justtannoor.custom.TextViewHead
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="AED 525"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp"
+                        android:layout_toEndOf="@+id/iv_price_icon"
+                        android:enabled="false"
+                        android:focusable="false"/>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <RelativeLayout
+            android:id="@+id/rlvBottomTextView"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="0dp"
+            android:background="@android:color/transparent">
+
+            <com.justtannoor.justtannoor.custom.TextViewHead
+
+                android:id="@+id/txtMenuName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start|center_vertical"
+                android:maxLines="1"
+                android:text="Arabic Sweet Bread"
+                android:textColor="@color/colorBlack"
+                android:textSize="13sp"
+                android:layout_toStartOf="@+id/iv_cntr_icon"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_cntr_icon"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_home_cnticon"
+                android:layout_toStartOf="@+id/txtMenuCountry"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="2dp"/>
+
+            <com.justtannoor.justtannoor.custom.TextViewHead
+                android:id="@+id/txtMenuCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start|center_vertical"
+                android:maxLines="1"
+                android:text="Arabic"
+                android:textColor="@color/colorBlack"
+                android:textSize="10sp"
+                android:visibility="visible"
+                android:enabled="false"
+                android:focusable="false"
+                android:background="@android:color/transparent"/>
+
+            <com.justtannoor.justtannoor.custom.TextViewHead
+                android:id="@+id/txtMenuMinOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/txtMenuName"
+                android:layout_marginEnd="1dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start|center_vertical"
+                android:maxLines="1"
+                android:text="Min Ord: AED 4521"
+                android:textColor="@color/colorBlack"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ViewDividerColor"/>
+
+</RelativeLayout>
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlvMenuCardMainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:padding="2dp">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlvBottomTextView"
+        android:layout_margin="1dp"
+        app:cardElevation="5dp"
+        app:contentPadding="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/mImgMenuCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                />
+
+         tannoorh.justtannoor.custom.CustomEdittext
+                android:visibility="gone"
+                android:id="@+id/edtPriceTag"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/menu_curve_shapeprice"
+                android:text="AED 525"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp"
+                android:drawableStart="@drawable/ic_arrow_back"
+                android:enabled="false"
+                />
+
+
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+    &lt;!&ndash;  <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:app="http://schemas.android.com/apk/res-auto"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="1dp"
+          app:cardElevation="5dp"
+          app:contentPadding="2dp">&ndash;&gt;
+
+    <RelativeLayout
+        android:id="@+id/rlvBottomTextView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        android:background="@android:color/transparent">
+
+     tannoorh.justtannoor.custom.TextViewHead
+
+            android:id="@+id/txtMenuCardName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="Arabic Sweet Bread"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp"
+
+            android:visibility="visible" />
+
+     tannoorh.justtannoor.custom.CustomEdittext
+            android:id="@+id/txtMenuCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtMenuName"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="Arabic"
+            android:textColor="@color/colorBlack"
+            android:textSize="11sp"
+            android:visibility="visible"
+            android:drawableStart="@drawable/ic_add"
+            android:enabled="false"
+            android:background="@android:color/transparent"/>
+
+     tannoorh.justtannoor.custom.TextViewHead
+            android:id="@+id/txtMenuMinOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/txtMenuName"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="7dp"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="Min Ord: AERD4521"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    &lt;!&ndash; </android.support.v7.widget.CardView>&ndash;&gt;
+
+</RelativeLayout>-->

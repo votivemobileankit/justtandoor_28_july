@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.justtannoor.justtannoor">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name="com.justtannoor.justtannoor.Utilities.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.justtannoor.justtannoor.activity.SplashScreen"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.justtannoor.justtannoor.activity.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service android:name="com.justtannoor.justtannoor.notification.MyAndroidFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.justtannoor.justtannoor.notification.MyAndroidFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.justtannoor.justtannoor.activity.SearchActivity" />
+        <activity
+            android:name="com.justtannoor.justtannoor.activity.NotificationListActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Notification"
+            android:launchMode="singleInstance"
+            android:parentActivityName="com.justtannoor.justtannoor.activity.MainActivity" />
+        <!-- <activity android:name=".activity.ReviewListActivity"></activity> -->
+
+
+        <!-- Facebook Configuration -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"
+            tools:replace="android:value" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBbWwjIgI4ngq4YbjtGskLICu6xaKTeT2M" /> <!-- AIzaSyCr1RJv_oe_e8sbA4m_PpxGnXrL02h0Cq0 -->
+
+        <!-- <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCr1RJv_oe_e8sbA4m_PpxGnXrL02h0Cq0"/> -->
+        <!-- <activity android:name=".activity.AllCategoryListActivity"></activity> -->
+        <activity
+            android:name="com.justtannoor.justtannoor.activity.TermConditionActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Term &amp; Condition"
+            android:launchMode="singleInstance"
+            android:parentActivityName="com.justtannoor.justtannoor.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.justtannoor.justtannoor.activity.MenusActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="About Us"
+            android:launchMode="singleInstance"
+            android:parentActivityName="com.justtannoor.justtannoor.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.justtannoor.justtannoor.activity.ImageZoomingActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Photo "
+            android:launchMode="singleInstance"
+            android:parentActivityName="com.justtannoor.justtannoor.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.justtannoor.justtannoor.activity.CheckOutActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Check Out "
+            android:launchMode="singleInstance"
+            android:parentActivityName="com.justtannoor.justtannoor.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.justtannoor.justtannoor.activity.MenuListActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="ADD TO CART "
+            android:launchMode="singleInstance"
+            android:parentActivityName="com.justtannoor.justtannoor.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.justtannoor.justtannoor.activity.AddtocartListActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Cart "
+            android:launchMode="singleInstance"
+            android:parentActivityName="com.justtannoor.justtannoor.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.justtannoor.justtannoor.activity.BankTransferActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Bank Transfer "
+            android:launchMode="singleInstance"
+            android:parentActivityName="com.justtannoor.justtannoor.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.justtannoor.justtannoor.activity.UploadBankSlipActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Upload Bank Slip "
+            android:launchMode="singleInstance"
+            android:parentActivityName="com.justtannoor.justtannoor.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.justtannoor.justtannoor.activity.CaseOnDeliveyActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Cash on Delivery"
+            android:launchMode="singleInstance"
+            android:parentActivityName="com.justtannoor.justtannoor.activity.MainActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

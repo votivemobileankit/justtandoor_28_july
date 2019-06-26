@@ -1,0 +1,157 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:background="@drawable/menu_bottom_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/rl_bottom_menu_first_item"
+        android:background="@null"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="0.9"
+        android:layout_height="@dimen/BottomMenuCellHeight">
+
+        <ImageView
+            android:id="@+id/iv_bottom_menu_first"
+            android:src="@drawable/img_btm_home_act"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/tv_bottom_menu_first"
+            android:textSize="@dimen/BottomMenuText"
+            android:textColor="@color/colorBottomText"
+            android:text="Home"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rl_bottom_menu_second_item"
+        android:layout_gravity="bottom"
+        android:background="@null"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="0.9"
+        android:layout_height="@dimen/BottomMenuCellHeight">
+
+
+        <ImageView
+            android:id="@+id/iv_bottom_menu_second"
+            android:src="@drawable/ic_listing"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/tv_bottom_menu_second"
+            android:textSize="@dimen/BottomMenuText"
+            android:textColor="@color/colorBlack"
+            android:text="Listing"
+            android:gravity="center"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rl_bottom_menu_third_item"
+        android:background="@null"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/BottomMenuCellHeight">
+
+
+        <ImageView
+            android:id="@+id/iv_bottom_menu_third"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/ic_category"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+
+        <TextView
+            android:id="@+id/tv_bottom_menu_third"
+            android:textSize="@dimen/BottomMenuText"
+            android:textColor="@color/colorBlack"
+            android:text="Category"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rl_bottom_menu_fourth_item"
+        android:layout_gravity="bottom"
+        android:background="@null"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/BottomMenuCellHeight">
+
+
+        <ImageView
+            android:id="@+id/iv_bottom_menu_fourth"
+            android:src="@drawable/ic_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+
+        <TextView
+            android:id="@+id/tv_bottom_menu_fourth"
+            android:textSize="@dimen/BottomMenuText"
+            android:textColor="@color/colorBlack"
+            android:text="Offer"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rl_bottom_menu_fifth_item"
+        android:layout_gravity="bottom"
+        android:background="@null"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1.2"
+        android:layout_height="@dimen/BottomMenuCellHeight">
+
+
+        <ImageView
+            android:id="@+id/iv_bottom_menu_five"
+            android:src="@drawable/ic_favourate"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+
+        <TextView
+            android:id="@+id/tv_bottom_menu_five"
+            android:textSize="@dimen/BottomMenuText"
+            android:textColor="@color/colorBlack"
+            android:text="Favourite"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

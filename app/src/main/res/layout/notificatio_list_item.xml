@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginEnd="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_margin="1dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="5dp"
+        card_view:cardMaxElevation="5dp"
+        card_view:cardBackgroundColor="@color/colorWhite"
+        card_view:contentPadding="1dp">
+
+        <LinearLayout
+            android:id="@+id/mainLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/imgnotifyPic"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="fitXY"
+                android:padding="2dp"
+               />
+
+            <RelativeLayout
+                android:id="@+id/txtRelativeMainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+
+                <com.justtannoor.justtannoor.custom.TextViewHead
+                    android:id="@+id/textNotifyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Property"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    />
+                <com.justtannoor.justtannoor.custom.TextViewHead
+                    android:id="@+id/textNotifyDesc"
+                    android:layout_below="@+id/textNotifyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:maxLines="5"
+                    android:padding="2dp"
+                    android:textColor="#818181"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="I am an Android developer for whom Android is the one and only love. I work as a freelancer which gets me and Android closer. I always love to share my learnings and love to learn from others knowledge too."
+                    android:textSize="13sp"
+                    />
+
+
+                <com.justtannoor.justtannoor.custom.TextViewHead
+                    android:id="@+id/txtNotifyTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="4 minute ago"
+                    android:textColor="@color/colorDarkBlack"
+                    android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#c8a271</color>
+    <color name="colorBottomText">#7D5A29</color>
+    <color name="colorPrimaryDark">#c8a271</color>
+    <color name="colorAccent">#4d4e41</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorGrediant">#d2d2d2</color>
+    <color name="colorBlack">#000000</color>
+    <color name="ViewDividerColor">#d3d3d3</color>
+
+    <color name="notificationBadgeText">#be2d64</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="ColorGreen">#00ff00</color>
+
+    <color name="fb">#3b5998</color>
+    <color name="google">#db3236</color>
+
+    <color name="ripple_effect_color">#ae4b9c</color>
+    <color name="golden_dust_yellow">#ffe220</color>
+    <color name="light_grey">#f2bd37</color>
+    <color name="colorDarkBlack">#808080</color>
+
+    <!-- package color -->
+
+    <color name="package1">#4fb630</color>
+    <color name="package2">#44cdf7</color>
+    <color name="package3">#edbb06</color>
+    <color name="colorSeprator">#ccc</color>
+    <color name="colorAppBg">#c6b7ad</color>
+    <color name="colorHintText">#808080</color>
+    <color name="colorMahroon">#be2d64</color>
+
+
+</resources>

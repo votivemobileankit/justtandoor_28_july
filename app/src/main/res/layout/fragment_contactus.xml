@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:scaleType="fitXY"
+           android:id="@+id/iv_contact_bg"
+            android:layout_width="match_parent"
+            android:src="@drawable/img_contact_bgtop"
+            android:layout_height="180dp"
+            />
+
+        <ImageView
+          android:id="@+id/iv_contact_logo"
+            android:layout_width="wrap_content"
+            android:src="@drawable/img_contact_logo"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_below="@+id/iv_contact_bg"
+            android:layout_margin="10dp"
+            app:contentPadding="1dp"
+            app:cardElevation="5dp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:id="@+id/lvlMainLinear"
+                android:layout_width="match_parent"
+                android:layout_margin="0dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                >
+
+                <com.justtannoor.justtannoor.custom.TextViewHead
+                    android:layout_width="match_parent"
+                    android:text="Contact Us"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+
+                <RelativeLayout
+                    android:padding="1dp"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="40dp">
+
+                    <com.justtannoor.justtannoor.custom.CustomEdittext
+                        android:id="@+id/edtName"
+                        android:layout_marginStart="5dp"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:hint="Name الاسم"
+                        android:textColorHint="@color/colorHintText"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSeprator"
+                    android:layout_marginTop="2dp"></View>
+
+                <RelativeLayout
+                    android:padding="1dp"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="40dp">
+
+                    <com.justtannoor.justtannoor.custom.CustomEdittext
+                        android:id="@+id/edtEmail"
+                        android:layout_marginStart="5dp"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:hint="Email البريد الإلكتروني"
+                        android:textColorHint="@color/colorHintText"/>
+
+                </RelativeLayout>
+                <View
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSeprator"
+                    android:layout_marginTop="2dp"></View>
+                <RelativeLayout
+                    android:padding="1dp"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="40dp">
+
+                    <com.justtannoor.justtannoor.custom.CustomEdittext
+                        android:id="@+id/edtMobile"
+                        android:layout_marginStart="5dp"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:hint="Phone رقم الهاتف"
+                        android:textColorHint="@color/colorHintText"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSeprator"
+                    android:layout_marginTop="2dp"></View>
+
+                <RelativeLayout
+                    android:padding="1dp"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="40dp">
+
+                    <com.justtannoor.justtannoor.custom.CustomEdittext
+                        android:id="@+id/edtCity"
+                        android:layout_marginStart="5dp"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:hint="City المدينة"
+                        android:textColorHint="@color/colorHintText"/>
+
+                </RelativeLayout>
+                <View
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSeprator"
+                    android:layout_marginTop="2dp"></View>
+
+                <RelativeLayout
+                    android:padding="1dp"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.justtannoor.justtannoor.custom.CustomEdittext
+                        android:id="@+id/edtMessage"
+                        android:padding="2dp"
+                        android:layout_marginStart="5dp"
+                        android:minLines="5"
+                        android:textSize="14sp"
+                        android:gravity="start|top"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Comments التعليق"
+                        android:textColorHint="@color/colorHintText"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSeprator"
+                    android:layout_marginTop="2dp"></View>
+
+
+                <Button
+                    android:id="@+id/btnSubmite"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:text="Submit"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSeprator"
+                    android:layout_marginTop="15dp"></View>
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:weightSum="2"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp"
+                    android:background="@android:color/transparent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent">
+
+                        <ImageView
+                            android:id="@+id/imgCallIcon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="10dp"
+                            android:padding="0dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/img_contact_whatsapp"
+                           />
+
+                        <com.justtannoor.justtannoor.custom.TextViewHead
+                            android:id="@+id/txtCallText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/imgCallIcon"
+                            android:gravity="start|center_vertical"
+                            android:text="+971506719393"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="11sp"
+                            android:layout_marginStart="5dp"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/imgInstaIcon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:padding="0dp"
+                            android:src="@drawable/img_contact_insta"
+
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/txtInstaText"/>
+
+                        <com.justtannoor.justtannoor.custom.TextViewHead
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/txtInstaText"
+                            android:layout_width="wrap_content"
+                            android:text="JustTannoor"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="11sp"
+                            android:maxLines="1"
+                            android:gravity="end|center_vertical"
+                            android:layout_marginEnd="10dp"
+                            android:layout_height="match_parent"
+                            android:visibility="visible"/>
+
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent">
+
+                        <ImageView
+                            android:id="@+id/imgEmailIcon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="10dp"
+                            android:padding="0dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/img_contact_email"
+                           />
+
+                        <com.justtannoor.justtannoor.custom.TextViewHead
+                            android:id="@+id/txtEmailText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/imgEmailIcon"
+                            android:gravity="start|center_vertical"
+                            android:text="justtannoor@gmail.com"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="11sp"
+                            android:visibility="visible"
+                            android:layout_marginStart="5dp"/>
+
+                        <ImageView
+                            android:id="@+id/imgSnapIcon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:padding="0dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/img_contact_snapchat"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/txtSnapText"/>
+
+                        <com.justtannoor.justtannoor.custom.TextViewHead
+                           android:layout_alignParentEnd="true"
+                            android:id="@+id/txtSnapText"
+                            android:layout_width="wrap_content"
+                            android:text="JustTannoor"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="11sp"
+                            android:maxLines="1"
+                            android:gravity="end|center_vertical"
+                            android:layout_marginEnd="10dp"
+                            android:layout_height="match_parent"
+                            android:visibility="visible"/>
+
+
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
+
+
+
+

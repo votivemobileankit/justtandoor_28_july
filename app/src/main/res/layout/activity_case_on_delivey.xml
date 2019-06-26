@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/crdViewInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardElevation="5dp"
+                app:contentPadding="1dp">
+
+
+                <LinearLayout
+                    android:id="@+id/lvlMainLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:orientation="vertical">
+
+                    <com.justtannoor.justtannoor.custom.TextViewHead
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Cash on Delivery الدفع عن الاستلام"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@android:color/transparent"
+                            android:padding="1dp">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstNameHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="start"
+                                android:text="Order ID رقم الطلب"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstNameStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_toRightOf="@+id/tstNameHeading"
+                                android:gravity="start"
+                                android:text="*"
+                                android:textColor="@color/colorRed"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/edtInfoOrderID"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@null"
+                                android:hint=""
+                                android:textColorHint="@color/colorHintText"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorSeprator" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:padding="1dp">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstEmailHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="start"
+                                android:text="Email البريد الإلكتروني"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstEmailStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_toRightOf="@+id/tstEmailHeading"
+                                android:gravity="start"
+                                android:text=""
+                                android:textColor="@color/colorBlack"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/edtInfoAccountHolderName"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_below="@+id/tstEmailHeading"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@null"
+                                android:hint=""
+                                android:textColorHint="@color/colorHintText"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorSeprator" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:padding="1dp">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstMobileHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="start"
+                                android:text="Contact Number رقم الاتصال"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstMobileStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_toRightOf="@+id/tstMobileHeading"
+                                android:gravity="start"
+                                android:text="*"
+                                android:textColor="@color/colorRed"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/edtInfoAccountNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_below="@+id/tstMobileHeading"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@null"
+                                android:hint=""
+                                android:textColorHint="@color/colorHintText"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorSeprator" />
+
+                        <!--Bank name-->
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:padding="1dp"
+                            android:visibility="invisible">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstBanknameHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="start"
+                                android:text="Important Info معلومات مهمة"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstBanknameStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_toRightOf="@+id/tstBanknameHeading"
+                                android:gravity="start"
+                                android:text="*"
+                                android:textColor="@color/colorRed"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/edtInfoBankname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tstBanknameHeading"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@null"
+                                android:hint=""
+                                android:textColorHint="@color/colorHintText"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorSeprator"
+                            android:visibility="invisible" />
+
+                        <!--iban code-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:padding="1dp"
+                            android:visibility="gone">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstAddressHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="start"
+                                android:text="Iban Number رقم إيبان"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstAddressStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_toRightOf="@+id/tstAddressHeading"
+                                android:gravity="start"
+                                android:text="*"
+                                android:textColor="@color/colorRed"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/edtInfoIfscCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_below="@+id/tstAddressHeading"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@null"
+                                android:hint=""
+                                android:textColorHint="@color/colorHintText"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorSeprator"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btnProceed"
+                            android:layout_width="fill_parent"
+                            android:layout_height="55dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/colorPrimary"
+                            android:text="Go to Whatsapp\nالذهاب إلى الواتس اب"
+                            android:textColor="@android:color/white"
+                            android:visibility="invisible" />
+
+                        <Button
+                            android:id="@+id/btnGoToHome"
+                            android:layout_width="fill_parent"
+                            android:layout_height="55dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/colorPrimary"
+                            android:text="Home\nالصفحة الرئيسية"
+                            android:textColor="@android:color/white"
+                            android:visibility="visible" />
+
+                        <com.justtannoor.justtannoor.custom.TextViewHead
+                            android:id="@+id/tvInfoCompleteORD"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:text="Ones you get the order delivery. Please click below Botton\nبمجرد استلام الطلبية ، يرجى النقر فوق الزر أدناه "
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16sp"
+                            android:visibility="invisible" />
+
+                        <Button
+                            android:id="@+id/btnCompletedOrder"
+                            android:layout_width="fill_parent"
+                            android:layout_height="55dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/colorPrimary"
+                            android:text="Order Completed\nتم اكتمال الطلب"
+                            android:textColor="@android:color/white"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

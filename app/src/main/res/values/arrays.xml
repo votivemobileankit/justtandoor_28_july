@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="array_countries">
+        <item>Kuwait</item>
+        <item>India</item>
+        <item>Australia</item>
+        <item>Canada</item>
+        <item>Cambodia</item>
+        <item>China</item>
+        <item>England</item>
+        <item>France</item>
+        <item>Japan</item>
+        <item>Rusia</item>
+        <item>USA</item>
+    </string-array>
+
+    <string-array name="array_langague">
+        <item>English</item>
+        <item>Arabic</item>
+    </string-array>
+
+    <string-array name="regions">
+        <item>Regions</item>
+        <item>Kuwait</item>
+        <item>India</item>
+    </string-array>
+
+    <string-array name="category">
+        <item>Category</item>
+        <item>category1</item>
+        <item>category2</item>
+        <item>category3</item>
+        <item>category4</item>
+        <item>category5</item>
+        <item>category6</item>
+        <item>category7</item>
+
+    </string-array>
+
+    <string-array name="tags">
+
+        <item>Filter</item>
+        <item>tags1</item>
+        <item>tags2</item>
+        <item>tags3</item>
+        <item>tags4</item>
+        <item>tags5</item>
+
+
+    </string-array>
+
+
+</resources>

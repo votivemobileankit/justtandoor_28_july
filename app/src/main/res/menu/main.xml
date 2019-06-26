@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:title=""
+        android:id="@+id/action_caseondelivery"
+        app:showAsAction="always"
+        android:orderInCategory="101"
+        android:icon="@drawable/case_notify_white"
+        android:visible="true" />
+    <item
+        android:title=""
+        android:id="@+id/action_notify"
+        app:showAsAction="always"
+        android:orderInCategory="102"
+        android:icon="@drawable/notify_white"
+        android:visible="true" />
+
+    <item
+        android:title=""
+        android:id="@+id/action_search"
+        app:showAsAction="always"
+        android:orderInCategory="103"
+        android:icon="@drawable/cart_icon"
+        android:visible="true" />
+
+    <!--<item
+        android:id="@+id/action_notification"
+        app:showAsAction="always"
+        android:visible="true"
+        android:orderInCategory="100"
+        android:title=""
+        app:actionLayout="@layout/custom_notification_layout" />-->
+
+</menu>

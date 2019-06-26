@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlvOfferMainView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:paddingEnd="5dp"
+    android:paddingTop="5dp"
+    android:paddingStart="5dp">
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="5dp"
+    android:layout_margin="1dp"
+    app:contentPadding="5dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/offerImageView"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+       />
+
+    <LinearLayout
+        android:id="@+id/lvlOfferMainitemLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:background="@android:color/transparent"
+            >
+
+            <!--<ImageView
+                android:id="@+id/offerImageView"
+                android:scaleType="fitXY"
+                android:src="@drawable/ad3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"/>-->
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:background="#99000000">
+
+
+            <com.justtannoor.justtannoor.custom.TextViewHead
+                android:id="@+id/txtExclusiveHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Exclusive Offer"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="10dp"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="#fff"/>
+
+            <com.justtannoor.justtannoor.custom.TextViewHead
+                android:id="@+id/txtGetHeading"
+                android:layout_below="@+id/txtExclusiveHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GET"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="10dp"
+                android:textSize="15sp"
+                android:textColor="#fff"/>
+
+            <com.justtannoor.justtannoor.custom.TextViewHead
+                android:id="@+id/txtPersentage"
+                android:layout_below="@+id/txtGetHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="26%"
+                android:layout_marginTop="1dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:layout_centerHorizontal="true"/>
+
+            <com.justtannoor.justtannoor.custom.TextViewHead
+                android:id="@+id/txtOffHeading"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OFF"
+                android:layout_marginBottom="2dp"
+                android:layout_marginEnd="5dp"
+                android:textSize="16sp"
+                android:textColor="#fff"/>
+
+
+
+        </RelativeLayout>
+
+      <!--  <ImageView
+            android:id="@+id/offerImageView"
+            android:scaleType="fitXY"
+            android:src="@drawable/ad3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />-->
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
+
+</RelativeLayout>

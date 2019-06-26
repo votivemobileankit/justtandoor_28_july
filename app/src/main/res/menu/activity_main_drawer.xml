@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/img_btm_home_act"
+            android:title="Home الصفحة الرئيسية" />
+
+        <item
+            android:id="@+id/nav_menu"
+            android:icon="@drawable/img_btm_menu_act"
+            android:title="Menu قائمة الطعام" /><!-- <item
+            android:id="@+id/nav_menu"
+            android:icon="@drawable/img_btm_menu_act"
+            android:title="Menu قائمة طعام" />-->
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/img_btm_gallery_act"
+            android:title="Gallery الصور" /><!-- <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/img_btm_gallery_act"
+            android:title="Gallery صالة عرض" />-->
+        <item
+            android:id="@+id/nav_offer"
+            android:icon="@drawable/img_btm_offer_act"
+            android:title="Offers عروض" />
+
+        <item
+            android:id="@+id/nav_contactus"
+            android:icon="@drawable/img_btm_map_act"
+            android:title="Contact Us اتصل بنا" />
+
+        <item
+            android:id="@+id/nav_upload_bank_slip"
+            android:icon="@drawable/bank"
+            android:title="Upload Bank Slip تحميل الإيداع البنكي" />
+
+        <!-- <item
+            android:id="@+id/nav_upload_bank_slip"
+            android:icon="@drawable/bank"
+            android:title="Upload Bank Slip تحميل زلة البنك" />-->
+
+        <item
+            android:id="@+id/nav_case_on_delivery_status"
+            android:icon="@drawable/case_notify_white"
+            android:title="Order Status حالة الطلب " />
+
+       <!-- <item
+            android:id="@+id/nav_mylist"
+            android:icon="@drawable/ic_listing"
+            android:title="My Listing" />-->
+
+</menu>

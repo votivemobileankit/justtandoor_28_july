@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlvMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="8dp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@color/colorWhite"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="5dp"
+        card_view:cardMaxElevation="5dp"
+        card_view:contentPadding="3dp">
+
+        <LinearLayout
+            android:id="@+id/mainLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.4">
+
+                <ImageView
+                    android:id="@+id/imgAddCartPic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="3dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/gradient_bg" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/txtRelativeMainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:background="@android:color/transparent">
+
+                <com.justtannoor.justtannoor.custom.TextViewHead
+                    android:id="@+id/textAddCartName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:maxLines="2"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+                <com.justtannoor.justtannoor.custom.TextViewHead
+                    android:id="@+id/textAddCartDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textAddCartName"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="1dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:padding="2dp"
+                    android:text="I am an Android droid is the. "
+                    android:textColor="#818181"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <com.justtannoor.justtannoor.custom.TextViewHead
+                    android:id="@+id/textAddCartSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textAddCartDesc"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="1dp"
+                    android:maxLines="5"
+                    android:padding="2dp"
+                    android:textColor="#818181"
+                    android:textSize="12sp" />
+
+                <com.justtannoor.justtannoor.custom.TextViewHead
+                    android:id="@+id/textAddCartPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textAddCartSize"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="1dp"
+                    android:maxLines="5"
+                    android:padding="2dp"
+                    android:textColor="#818181"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textAddCartPrice"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/imgQuentityLess"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:paddingStart="2dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="2dp"
+                        android:paddingBottom="2dp"
+                        android:src="@drawable/mless_icon" />
+
+                    <com.justtannoor.justtannoor.custom.TextViewHead
+                        android:id="@+id/tvQuentityLess"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                    <com.justtannoor.justtannoor.custom.TextViewHead
+                        android:id="@+id/tvQuentityNumber"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgQuentityMore"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:paddingStart="2dp"
+
+                        android:paddingTop="2dp"
+                        android:paddingEnd="2dp"
+                        android:paddingBottom="2dp"
+                        android:src="@drawable/mmore_icon" />
+
+
+                    <com.justtannoor.justtannoor.custom.TextViewHead
+                        android:id="@+id/tvQuentityMore"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/txtAddCartDelete"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp"
+                    android:src="@drawable/deletecart" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

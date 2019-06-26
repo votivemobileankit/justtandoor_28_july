@@ -1,0 +1,110 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">#979797</item>
+        <item name="android:textSize">20sp</item>
+        <item name="colorAccent">#919191</item>
+
+    </style>
+
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/golden_dust_yellow</item>
+        <item name="colorControlActivated">@color/light_grey</item>
+
+    </style>
+
+    <style name="ItemTextAppearance">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:background">@drawable/bg_splash</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ItemTextAppearance3">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:background">#ffffff</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="ItemTextAppearance1">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:background">@drawable/bg_splash</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:background">@drawable/bgspinner</item>
+        <item name="android:theme">@style/ItemTextAppearance</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+
+    <style name="spinnerstyle">
+        <item name="android:background">@drawable/bg_spinner</item>
+        <item name="android:theme">@style/ItemTextAppearance3</item>
+    </style>
+
+
+    <style name="spinner_style1">
+        <item name="android:background">@drawable/simple_spinner</item>
+        <item name="android:theme">@style/ItemTextAppearance1</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="mypack1">
+
+        <item name="android:background">@color/package1</item>
+
+    </style>
+
+    <style name="NavigationViewStyle">
+        <item name="android:textSize">12sp</item> <!-- menu item text size-->
+        <!--<item name="android:listPreferredItemHeightSmall">40dp</item>&lt;!&ndash; menu item height&ndash;&gt;-->
+    </style>
+<!--
+    <style name="MyTheme" parent="android:Theme.Holo.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+    </style>-->
+
+</resources>

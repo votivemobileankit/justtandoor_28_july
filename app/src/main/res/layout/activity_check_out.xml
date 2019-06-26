@@ -1,0 +1,1077 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/crdViewInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_contact_bg"
+                android:layout_margin="10dp"
+                app:cardElevation="5dp"
+                app:contentPadding="1dp">
+
+                <LinearLayout
+                    android:id="@+id/lvlMainLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <com.justtannoor.justtannoor.custom.TextViewHead
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            android:gravity="center"
+                            android:text="Contact Us"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20sp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@android:color/transparent"
+                            android:padding="1dp">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstNameHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="start"
+                                android:text="First Name الاسم الاول"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstNameStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_toRightOf="@+id/tstNameHeading"
+                                android:gravity="start"
+                                android:text="*"
+                                android:textColor="@color/colorRed"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.CustomEdittext
+                                android:id="@+id/edtInfoName"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="5dp"
+                                android:background="@null"
+                                android:hint=""
+                                android:inputType="text"
+                                android:textColorHint="@color/colorHintText"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorSeprator"></View>
+
+                        <!--Last name value -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@android:color/transparent"
+                            android:padding="1dp">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstLastNameHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="start"
+                                android:text="Last Name الكنية"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstLastNameStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_toRightOf="@+id/tstLastNameHeading"
+                                android:gravity="start"
+                                android:text="*"
+                                android:textColor="@color/colorRed"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.CustomEdittext
+                                android:id="@+id/edtInfoLastName"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="5dp"
+                                android:background="@null"
+                                android:hint=""
+                                android:inputType="text"
+                                android:textColorHint="@color/colorHintText"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorSeprator"></View>
+
+
+                        <!--Last name valueee-->
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:padding="1dp">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstEmailHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="start"
+                                android:text="Email(Optional) البريد الإلكتروني"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstEmailStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_toRightOf="@+id/tstEmailHeading"
+                                android:gravity="start"
+                                android:text=""
+                                android:textColor="@color/colorBlack"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.CustomEdittext
+                                android:id="@+id/edtInfoEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_below="@+id/tstEmailHeading"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="5dp"
+                                android:background="@null"
+                                android:hint=""
+                                android:inputType="textEmailAddress"
+                                android:textColorHint="@color/colorHintText"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorSeprator"></View>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:padding="1dp">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstMobileHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="start"
+                                android:text="Phone رقم الهاتف"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstMobileStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_toRightOf="@+id/tstMobileHeading"
+                                android:gravity="start"
+                                android:text="*"
+                                android:textColor="@color/colorRed"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/edtInfoMobileCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_below="@+id/tstMobileHeading"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="5dp"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:inputType="number"
+                                android:text="+971"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp" />
+
+                            <com.justtannoor.justtannoor.custom.CustomEdittext
+                                android:id="@+id/edtInfoMobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_below="@+id/tstMobileHeading"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="5dp"
+                                android:layout_toEndOf="@+id/edtInfoMobileCode"
+                                android:background="@null"
+                                android:hint=""
+                                android:inputType="number"
+                                android:textColorHint="@color/colorHintText"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorSeprator"></View>
+
+                        <!--Address-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="64dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:padding="1dp">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstAddressHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="start"
+                                android:text="Delivery Address عنوان التسليم"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstAddressStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_toRightOf="@+id/tstAddressHeading"
+                                android:gravity="start"
+                                android:text="*"
+                                android:textColor="@color/colorRed"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/edtInfoAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="40dp"
+                                android:layout_below="@+id/tstAddressHeading"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="5dp"
+                                android:layout_toStartOf="@+id/imgPlacePicker"
+                                android:background="@null"
+                                android:hint=""
+                                android:textColor="@android:color/black"
+                                android:textColorHint="@color/colorHintText"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/imgPlacePicker"
+                                android:layout_width="50dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_below="@+id/tstAddressHeading"
+                                android:background="@null"
+                                android:paddingStart="20dp"
+                                android:src="@drawable/img_btm_map_act"/>
+                            <!-- <com.tannoor.justtannoor.custom.CustomEdittext
+                                android:layout_below="@+id/tstAddressHeading"
+                                android:id="@+id/edtInfoAddress"
+                                android:layout_marginStart="5dp"
+                                android:textSize="14sp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@null"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:hint=""
+                                android:textColorHint="@color/colorHintText"/>-->
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorSeprator"></View>
+
+                        <!--Date time-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:padding="1dp">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstDateHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="start"
+                                android:text="Date تاريخ"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstDateStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_toRightOf="@+id/tstDateHeading"
+                                android:gravity="start"
+                                android:text="*"
+                                android:textColor="@color/colorRed"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/edtInfoDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_below="@+id/tstDateHeading"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="5dp"
+                                android:background="@null"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorSeprator">
+
+                        </View>
+
+                        <!--time-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:padding="1dp">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstTimeHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="start"
+                                android:text="Time الوقت"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstTimeStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_toRightOf="@+id/tstTimeHeading"
+                                android:gravity="start"
+                                android:text="*"
+                                android:textColor="@color/colorRed"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/edtInfoTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_below="@+id/tstTimeHeading"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="5dp"
+                                android:background="@null"
+                                android:textSize="14sp"
+                                />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorSeprator"></View>
+
+                        <!-- pickup method -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:padding="1dp"
+                            android:visibility="visible">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstPicupMethod"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="start"
+                                android:text="Pick Up Method طريقة الاستلام"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstPicupStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_toRightOf="@+id/tstPicupMethod"
+                                android:gravity="start"
+                                android:text="*"
+                                android:textColor="@color/colorRed"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+
+                            <RadioGroup
+                                android:id="@+id/mRadioGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/tstPicupMethod"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/mRadioButtonPicup"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:checked="true"
+                                    android:gravity="center"
+                                    android:text="Pick up\nاستلام"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/mRadioButtonDelivery"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginStart="50dp"
+                                   android:gravity="center"
+                                    android:checked="false"
+                                    android:text="Delivery\nتوصيل"
+                                    android:textSize="14sp" />
+                            </RadioGroup>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:padding="1dp"
+                            android:visibility="gone">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstPostalCodeHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+
+                                android:layout_marginTop="3dp"
+                                android:gravity="start"
+                                android:text="Zip Code"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstPostalCodeStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_toRightOf="@+id/tstPostalCodeHeading"
+                                android:gravity="start"
+                                android:text="*"
+                                android:textColor="@color/colorRed"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+
+                            <com.justtannoor.justtannoor.custom.CustomEdittext
+                                android:id="@+id/edtPostalCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_below="@+id/tstPostalCodeHeading"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="5dp"
+                                android:background="@null"
+                                android:hint=""
+                                android:inputType="number"
+                                android:textColorHint="@color/colorHintText"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorSeprator"></View>
+
+                        <Button
+                            android:id="@+id/btn_signup"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/colorPrimary"
+                            android:text="Submit"
+                            android:textColor="@android:color/white"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/crdViewInfo"
+
+                android:background="@null">
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/iv_contact_bg"
+                    android:layout_margin="10dp"
+                    app:cardElevation="5dp"
+                    app:contentPadding="1dp">
+
+                    <com.justtannoor.justtannoor.custom.TextViewHead
+                        android:id="@+id/tstPaymentHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/ivPartialIcon"
+                        android:background="@color/colorWhite"
+                        android:gravity="start|top"
+                        android:text="Payment Options خيارات الدفع"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:visibility="visible" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstOrderPriceText"
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/colorWhite"
+                                android:gravity="center"
+                                android:text="Order Price:\nسعر الطلب"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstOrderPrice"
+                                android:layout_toEndOf="@+id/tstOrderPriceText"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/colorWhite"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp">
+
+                        <com.justtannoor.justtannoor.custom.TextViewHead
+                            android:id="@+id/tstDlChargeText"
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/colorWhite"
+                            android:gravity="center"
+                            android:text="Delivery Charges:\nرسوم التوصيل"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstDlCharge"
+                                android:layout_toEndOf="@+id/tstDlChargeText"
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/colorWhite"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+                        </RelativeLayout>
+
+                        <!--Discount price -->
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="75dp">
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstDicountPriceText"
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/colorWhite"
+                                android:gravity="center"
+                                android:text="Discount:\nالتخفيض"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstDicountPrice"
+                                android:layout_toEndOf="@+id/tstDicountPriceText"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/colorWhite"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+
+
+
+
+
+                        <!--End of discount price -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp">
+
+                        <com.justtannoor.justtannoor.custom.TextViewHead
+                            android:id="@+id/tstTotalPriceText"
+
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/colorWhite"
+                            android:gravity="center"
+                            android:text="Total Price:\nالسعر الكلي"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                            android:id="@+id/tstTotalPrice"
+                                android:layout_toEndOf="@+id/tstTotalPriceText"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/colorWhite"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/colorWhite"
+                            android:orientation="horizontal"
+                            android:padding="2dp"
+                            android:weightSum="2">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="2dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorPrimary">
+
+                                <ImageView
+                                    android:id="@+id/ivPartialIcon"
+                                    android:layout_width="30dp"
+                                    android:layout_height="50dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginStart="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:background="@color/colorWhite"
+                                    android:padding="8dp"
+                                    android:src="@drawable/ic_add"
+                                    android:visibility="gone" />
+
+                                <com.justtannoor.justtannoor.custom.TextViewHead
+                                    android:id="@+id/tstPartialPayment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginEnd="1dp"
+                                    android:layout_marginStart="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_toRightOf="@+id/ivPartialIcon"
+                                    android:background="@color/colorPrimary"
+                                    android:gravity="center"
+                                    android:text="Bank Transfer \nالتحويل المصرفي"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="16sp"
+                                    android:visibility="visible" />
+
+                                <!--<com.tannoor.justtannoor.custom.TextViewHead
+                                    android:id="@+id/tstPartialPayment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginEnd="1dp"
+                                    android:layout_marginStart="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_toRightOf="@+id/ivPartialIcon"
+                                    android:background="@color/colorPrimary"
+                                    android:gravity="center"
+                                    android:text="Partial Payment\nدفع جزء من المال"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="16sp"
+                                    android:visibility="visible" />-->
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="2dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorPrimary">
+
+                                <ImageView
+                                    android:id="@+id/ivFullIcon"
+                                    android:layout_width="30dp"
+                                    android:layout_height="50dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginStart="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:background="@color/colorWhite"
+                                    android:padding="8dp"
+                                    android:src="@drawable/ic_add"
+                                    android:visibility="gone" />
+
+                                <com.justtannoor.justtannoor.custom.TextViewHead
+                                    android:id="@+id/tstFullPayment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginEnd="1dp"
+                                    android:layout_marginStart="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_toRightOf="@+id/ivFullIcon"
+                                    android:background="@color/colorPrimary"
+                                    android:gravity="center"
+                                    android:text="Cash on Delivery\nالدفع عن الاستلام"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="16sp"
+                                    android:visibility="visible" />
+
+                                <!-- <com.tannoor.justtannoor.custom.TextViewHead
+                                    android:id="@+id/tstFullPayment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginEnd="1dp"
+                                    android:layout_marginStart="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_toRightOf="@+id/ivFullIcon"
+                                    android:background="@color/colorPrimary"
+                                    android:gravity="center"
+                                    android:text="Full Payment\nدفع كامل"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="16sp"
+                                    android:visibility="visible" />-->
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@color/colorWhite"
+                            android:visibility="gone"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="2dp"
+                                android:background="@color/colorBlack">
+
+                                <ImageView
+                                    android:id="@+id/ivBankTransferIcon"
+                                    android:layout_width="30dp"
+                                    android:layout_height="50dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginStart="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:background="@color/colorWhite"
+                                    android:padding="8dp"
+                                    android:src="@drawable/ic_add"
+                                    android:visibility="gone" />
+
+                                <com.justtannoor.justtannoor.custom.TextViewHead
+                                    android:id="@+id/tstBankTransferPayment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginEnd="1dp"
+                                    android:layout_marginStart="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_toRightOf="@+id/ivBankTransferIcon"
+                                    android:background="@color/colorPrimary"
+                                    android:gravity="center"
+                                    android:text="Bank Transfer \nالتحويل المصرفي"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="16sp"
+                                    android:visibility="visible" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <!--  <RelativeLayout
+                          android:padding="1dp"
+                          android:background="@android:color/transparent"
+                          android:layout_width="match_parent"
+                          android:layout_marginTop="2dp"
+                          android:layout_height="60dp">
+
+                       tannoorh.justtannoor.custom.TextViewHead
+                              android:id="@+id/tstNameHeading"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Name"
+                              android:layout_marginTop="3dp"
+                              android:layout_marginStart="5dp"
+                              android:textStyle="bold"
+                              android:textColor="@color/colorBlack"
+                              android:textSize="14sp"
+                              android:gravity="start"
+                              android:visibility="visible"
+                              />
+                       tannoorh.justtannoor.custom.TextViewHead
+                              android:id="@+id/tstNameStar"
+                              android:layout_toRightOf="@+id/tstNameHeading"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="*"
+                              android:textStyle="bold"
+                              android:textColor="@color/colorRed"
+                              android:textSize="16sp"
+                              android:gravity="start"
+                              android:layout_marginStart="5dp"
+                              android:visibility="visible"/>
+
+                       tannoorh.justtannoor.custom.CustomEdittext
+                              android:id="@+id/txtInfoName"
+                              android:layout_marginStart="5dp"
+                              android:textSize="14sp"
+                              android:layout_alignParentBottom="true"
+                              android:layout_gravity="center_vertical"
+                              android:background="@null"
+                              android:layout_width="match_parent"
+                              android:layout_height="35dp"
+                              android:hint="JustTannoor"
+                              android:textColorHint="#000"/>
+
+                      </RelativeLayout>
+                      <View
+                          android:layout_marginStart="5dp"
+                          android:layout_marginEnd="5dp"
+                          android:layout_width="match_parent"
+                          android:layout_height="1dp"
+                          android:background="@color/colorSeprator"
+                          android:layout_marginTop="2dp"></View>
+  -->
+
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/colorPrimary"
+                        android:text="Submit"
+                        android:textColor="@android:color/white"
+                        android:visibility="gone" />
+
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
