@@ -120,7 +120,24 @@ public class MenuListActivity extends AppCompatActivity {
                 rbn=(RadioButton)findViewById(selectedId);*/
                 Log.e(TAG, "mResult: >>" + mResult.toString());
 
-                callAddmenuListAPI();
+
+                if ((menuModal.getResponse().getFoodtype() != null) && (menuModal.getResponse().getFoodtype().size() > 0)){
+                    if(mKeyValueParams!=null) {
+                        if (mKeyValueParams.size() > 0) {
+                            callAddmenuListAPI();
+                        }else{
+                            Toast.makeText(MenuListActivity.this,"Please select option",Toast.LENGTH_SHORT).show();
+                        }
+
+                    }else{
+                        Toast.makeText(MenuListActivity.this,"Please select option",Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+
+                    callAddmenuListAPI();
+                }
+
+
 
               /*  if (mCounterResponse.getTotalOrderCount() < mCounterResponse.getTotalOrderLimit()) {
                     callAddmenuListAPI();
@@ -136,7 +153,7 @@ public class MenuListActivity extends AppCompatActivity {
             }
         });
     }
-
+    MenuDetailModel menuModal;
     private void callmenuDetailsListAPI() {
         baseRequest.setBaseRequestListner(new RequestReciever() {
             @Override
@@ -148,7 +165,7 @@ public class MenuListActivity extends AppCompatActivity {
                     rlvDataContainer.setVisibility(View.VISIBLE);
                     rlvNoInternetContainer.setVisibility(View.GONE);
                     rlvNoDataFoundContainer.setVisibility(View.GONE);
-                    MenuDetailModel menuModal = gson.fromJson(Json, MenuDetailModel.class);
+                     menuModal = gson.fromJson(Json, MenuDetailModel.class);
                     dynamicView(menuModal);
                 } catch (Exception e) {
                     e.printStackTrace();

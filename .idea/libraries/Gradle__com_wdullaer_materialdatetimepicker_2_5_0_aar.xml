@@ -1,12 +1,15 @@
 <component name="libraryTable">
   <library name="Gradle: com.wdullaer:materialdatetimepicker:2.5.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/materialdatetimepicker-2.5.0.aar/845fb09c2248e023f30de9bd307100eb/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/materialdatetimepicker-2.5.0.aar/845fb09c2248e023f30de9bd307100eb/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/materialdatetimepicker-2.5.0.aar/fb3275acb18fcea1ea08ff2e97b39486/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/materialdatetimepicker-2.5.0.aar/fb3275acb18fcea1ea08ff2e97b39486/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/materialdatetimepicker-2.5.0.aar/b5aecb7864db0f3100c20800ecb5834a/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/materialdatetimepicker-2.5.0.aar/b5aecb7864db0f3100c20800ecb5834a/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/materialdatetimepicker-2.5.0.aar/b5aecb7864db0f3100c20800ecb5834a/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.wdullaer/materialdatetimepicker/2.5.0/3a1e7510ee04e4eb8fa0bd88341b705de95d50ab/materialdatetimepicker-2.5.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/modules-2/files-2.1/com.wdullaer/materialdatetimepicker/2.5.0/3a1e7510ee04e4eb8fa0bd88341b705de95d50ab/materialdatetimepicker-2.5.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:documentfile:28.0.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/7b60e1db2b3356f4281f27ca06cc0563/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/7b60e1db2b3356f4281f27ca06cc0563/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/08fe21835fc1e582c8dad416d9e54d0f/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/08fe21835fc1e582c8dad416d9e54d0f/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/7c536ed1380a866bb41d1dbb7fa683ba/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/7c536ed1380a866bb41d1dbb7fa683ba/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/7c536ed1380a866bb41d1dbb7fa683ba/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-instantapps-license:12.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-instantapps-license-12.0.1.aar/a561cccb0d3d090f9c228f484f3c8dbc/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-instantapps-license-12.0.1.aar/a561cccb0d3d090f9c228f484f3c8dbc/res" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-instantapps-license-12.0.1.aar/563f84a3bf5d5d4a4980d36018510e62/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-instantapps-license-12.0.1.aar/563f84a3bf5d5d4a4980d36018510e62/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-instantapps-license-12.0.1.aar/88d9ddbf2d9f6f770f584073929ed27b/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-instantapps-license-12.0.1.aar/88d9ddbf2d9f6f770f584073929ed27b/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-instantapps-license-12.0.1.aar/88d9ddbf2d9f6f770f584073929ed27b/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

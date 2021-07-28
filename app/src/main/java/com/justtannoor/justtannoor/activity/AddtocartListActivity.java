@@ -7,6 +7,7 @@ import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -93,7 +94,7 @@ public class AddtocartListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(Constant.TOTAL_PRICE > 500)
+                if(Constant.TOTAL_PRICE >= 500)
                 {
                     Intent mIntent = new Intent(mContext, CheckOutActivity.class);
                     mIntent.putExtra("mCounterValue",mCounterResponse);
@@ -169,6 +170,7 @@ public class AddtocartListActivity extends AppCompatActivity {
         try {
             ////Put input parameter here
             jsonObject.addProperty("visitor_id", mAndroidDeviceID);
+            Log.e("param",""+jsonObject.toString());
            /*  jsonObject.addProperty(Enum.USER_PASSWORD, password);
             jsonObject.addProperty(Enum.DEVICE_ID, androidDeviceId);
             jsonObject.addProperty(Enum.DEVICE_TYPE, "android");*/

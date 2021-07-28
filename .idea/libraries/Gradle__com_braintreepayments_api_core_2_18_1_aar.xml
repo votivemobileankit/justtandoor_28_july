@@ -1,12 +1,15 @@
 <component name="libraryTable">
   <library name="Gradle: com.braintreepayments.api:core:2.18.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-2.18.1.aar/92076560830fe5811293f4b02933d6f8/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-2.18.1.aar/92076560830fe5811293f4b02933d6f8/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/core-2.18.1.aar/6dc34dab819b6b8539b5e8c489b6e5a2/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/core-2.18.1.aar/6dc34dab819b6b8539b5e8c489b6e5a2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-2.18.1.aar/6547f172d56f22d8edf985712f1dab22/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-2.18.1.aar/6547f172d56f22d8edf985712f1dab22/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-2.18.1.aar/6547f172d56f22d8edf985712f1dab22/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.braintreepayments.api/core/2.18.1/6f61704fdebbf4151e79e3fa5b673bb94149d3cd/core-2.18.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/modules-2/files-2.1/com.braintreepayments.api/core/2.18.1/6f61704fdebbf4151e79e3fa5b673bb94149d3cd/core-2.18.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

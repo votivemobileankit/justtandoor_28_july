@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-wearable:12.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-wearable-12.0.1.aar/73abc6e517cf35c8ca728144db1ffbab/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-wearable-12.0.1.aar/73abc6e517cf35c8ca728144db1ffbab/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-wearable-12.0.1.aar/e0fb5b2343b27ad4a6a586022b48bfc8/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-wearable-12.0.1.aar/e0fb5b2343b27ad4a6a586022b48bfc8/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-wearable-12.0.1.aar/258e92663beaaf7343fa65e0beb0798c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-wearable-12.0.1.aar/258e92663beaaf7343fa65e0beb0798c/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-wearable-12.0.1.aar/258e92663beaaf7343fa65e0beb0798c/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

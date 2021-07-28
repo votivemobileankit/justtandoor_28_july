@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-nearby:12.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-nearby-12.0.1.aar/3331502ab429f9881171fc658bee3cd9/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-nearby-12.0.1.aar/3331502ab429f9881171fc658bee3cd9/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-nearby-12.0.1.aar/5edbc5fd73b8512bfa376e614e2fc8e4/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-nearby-12.0.1.aar/5edbc5fd73b8512bfa376e614e2fc8e4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-nearby-12.0.1.aar/d8a4093a886eccdb0034ada5463ead29/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-nearby-12.0.1.aar/d8a4093a886eccdb0034ada5463ead29/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-nearby-12.0.1.aar/d8a4093a886eccdb0034ada5463ead29/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

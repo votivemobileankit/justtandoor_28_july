@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-analytics:12.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-analytics-12.0.1.aar/01c13b02645a30838020257fe1c173a8/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-analytics-12.0.1.aar/01c13b02645a30838020257fe1c173a8/res" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-analytics-12.0.1.aar/ec080ec201a999a9e2ac7edffefe2c85/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-analytics-12.0.1.aar/ec080ec201a999a9e2ac7edffefe2c85/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-analytics-12.0.1.aar/68faa137ee211a6c59260104d90c9694/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-analytics-12.0.1.aar/68faa137ee211a6c59260104d90c9694/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-analytics-12.0.1.aar/68faa137ee211a6c59260104d90c9694/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

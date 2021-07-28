@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-auth-api-phone-license:12.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-12.0.1.aar/4bbf67ba820605ea34793992f2f7f7ff/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-12.0.1.aar/4bbf67ba820605ea34793992f2f7f7ff/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-12.0.1.aar/7ae21d4f8e6b01566ca710ff7536e60f/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-12.0.1.aar/7ae21d4f8e6b01566ca710ff7536e60f/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-12.0.1.aar/7a030b4de6efa318367aa5df038ac678/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-12.0.1.aar/7a030b4de6efa318367aa5df038ac678/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-12.0.1.aar/7a030b4de6efa318367aa5df038ac678/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-vision-common-license:12.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-license-12.0.1.aar/b470ac53728f3f9ee5b94f3b0e72e6d5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-license-12.0.1.aar/b470ac53728f3f9ee5b94f3b0e72e6d5/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-vision-common-license-12.0.1.aar/f174228d78669a448e2240f57bbb9694/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-vision-common-license-12.0.1.aar/f174228d78669a448e2240f57bbb9694/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-license-12.0.1.aar/16d45f21aebfc40dbb52799e15f4a51c/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-license-12.0.1.aar/16d45f21aebfc40dbb52799e15f4a51c/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-license-12.0.1.aar/16d45f21aebfc40dbb52799e15f4a51c/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

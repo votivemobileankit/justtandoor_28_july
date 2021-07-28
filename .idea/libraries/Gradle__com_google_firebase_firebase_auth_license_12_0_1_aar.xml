@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-auth-license:12.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-auth-license-12.0.1.aar/c63b4640c04b4fa551bd7f0c1672001d/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-auth-license-12.0.1.aar/c63b4640c04b4fa551bd7f0c1672001d/res" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/firebase-auth-license-12.0.1.aar/5bf5021b7e5a0b260b9b07539a22f2cb/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/firebase-auth-license-12.0.1.aar/5bf5021b7e5a0b260b9b07539a22f2cb/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-auth-license-12.0.1.aar/59fc42aef0c183261c7c1f903738ea96/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-auth-license-12.0.1.aar/59fc42aef0c183261c7c1f903738ea96/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-auth-license-12.0.1.aar/59fc42aef0c183261c7c1f903738ea96/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-panorama-license:12.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-panorama-license-12.0.1.aar/0e0093aa003bbea730c39d93f205c8e6/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-panorama-license-12.0.1.aar/0e0093aa003bbea730c39d93f205c8e6/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-panorama-license-12.0.1.aar/e2fc76e9cf313381ffb4e385891c3f2c/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-panorama-license-12.0.1.aar/e2fc76e9cf313381ffb4e385891c3f2c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-panorama-license-12.0.1.aar/b90cbc7305e69f274f7a80bb73ffaaab/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-panorama-license-12.0.1.aar/b90cbc7305e69f274f7a80bb73ffaaab/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-panorama-license-12.0.1.aar/b90cbc7305e69f274f7a80bb73ffaaab/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

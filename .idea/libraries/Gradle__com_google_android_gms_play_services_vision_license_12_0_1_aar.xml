@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-vision-license:12.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-vision-license-12.0.1.aar/6d6cb1fb0044ebfa520735b9bdc165a1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-vision-license-12.0.1.aar/6d6cb1fb0044ebfa520735b9bdc165a1/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-vision-license-12.0.1.aar/937b43c6a3811593e91629cc82a14145/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-vision-license-12.0.1.aar/937b43c6a3811593e91629cc82a14145/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-vision-license-12.0.1.aar/3f8e216688e86f0402722143a26361d9/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-vision-license-12.0.1.aar/3f8e216688e86f0402722143a26361d9/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-vision-license-12.0.1.aar/3f8e216688e86f0402722143a26361d9/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

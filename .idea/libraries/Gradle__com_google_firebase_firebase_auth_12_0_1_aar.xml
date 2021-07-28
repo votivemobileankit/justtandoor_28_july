@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-auth:12.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-auth-12.0.1.aar/1898b399243a228c7de796bec57f97c4/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-auth-12.0.1.aar/1898b399243a228c7de796bec57f97c4/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/firebase-auth-12.0.1.aar/05cf5f87c9c99425275ee18a11fbdb1f/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/firebase-auth-12.0.1.aar/05cf5f87c9c99425275ee18a11fbdb1f/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-auth-12.0.1.aar/63681406c95a97263178779f94b29093/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-auth-12.0.1.aar/63681406c95a97263178779f94b29093/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-auth-12.0.1.aar/63681406c95a97263178779f94b29093/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

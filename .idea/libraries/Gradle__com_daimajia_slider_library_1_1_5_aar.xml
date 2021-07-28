@@ -1,12 +1,15 @@
 <component name="libraryTable">
   <library name="Gradle: com.daimajia.slider:library:1.1.5@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.1.5.aar/86adc283649b74cd338403646699216a/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.1.5.aar/86adc283649b74cd338403646699216a/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/library-1.1.5.aar/6cbcb7138da0b1273f32fa3b36b19e62/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/library-1.1.5.aar/6cbcb7138da0b1273f32fa3b36b19e62/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.1.5.aar/e652d5b60f6fd50deaa0cbfcb977ab3f/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.1.5.aar/e652d5b60f6fd50deaa0cbfcb977ab3f/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.1.5.aar/e652d5b60f6fd50deaa0cbfcb977ab3f/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.daimajia.slider/library/1.1.5/5040bee95115677508106e1a42cd685bdc570369/library-1.1.5-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/modules-2/files-2.1/com.daimajia.slider/library/1.1.5/5040bee95115677508106e1a42cd685bdc570369/library-1.1.5-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

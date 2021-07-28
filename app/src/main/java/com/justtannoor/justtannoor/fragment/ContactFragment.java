@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -188,9 +189,11 @@ public class ContactFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onSuccess(int APINumber, String Json, Object obj) {
                 //  JSONArray arr = (JSONArray) obj;
+                Log.e("json",""+Json);
                 try {
                     Gson gson = new Gson();
                     //////////////add model class here
+
                     // AddCartListModel galleyModal = gson.fromJson(Json, AddCartListModel.class);
                     //  addToCartResponse(galleyModal);
                     Toast.makeText(mActivity, "Message send Successfully", Toast.LENGTH_LONG).show();
@@ -226,6 +229,7 @@ public class ContactFragment extends Fragment implements View.OnClickListener {
             jsonObject.addProperty("mobilenumber", mMobile);
             jsonObject.addProperty("address", mCity);
             jsonObject.addProperty("message", mMessage);
+            Log.e("json object",""+jsonObject);
            /*  jsonObject.addProperty(Enum.USER_PASSWORD, password);
             jsonObject.addProperty(Enum.DEVICE_ID, androidDeviceId);
             jsonObject.addProperty(Enum.DEVICE_TYPE, "android");*/

@@ -1,12 +1,15 @@
 <component name="libraryTable">
   <library name="Gradle: com.braintreepayments:browser-switch:0.1.7@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/browser-switch-0.1.7.aar/aeb4544ca8d695f89464c1a534dbaf8e/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/browser-switch-0.1.7.aar/aeb4544ca8d695f89464c1a534dbaf8e/res" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/browser-switch-0.1.7.aar/35ecc9a85e2290cb313301e38a48e2f2/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/browser-switch-0.1.7.aar/35ecc9a85e2290cb313301e38a48e2f2/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/browser-switch-0.1.7.aar/cf942e5e0169517ca0b1d2315488e5df/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/browser-switch-0.1.7.aar/cf942e5e0169517ca0b1d2315488e5df/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/browser-switch-0.1.7.aar/cf942e5e0169517ca0b1d2315488e5df/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.braintreepayments/browser-switch/0.1.7/743c7868e7e7e6f9136263e7cf4a45613d1f9f41/browser-switch-0.1.7-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/modules-2/files-2.1/com.braintreepayments/browser-switch/0.1.7/743c7868e7e7e6f9136263e7cf4a45613d1f9f41/browser-switch-0.1.7-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

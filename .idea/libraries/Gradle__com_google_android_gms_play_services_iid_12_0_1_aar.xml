@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-iid:12.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/90d44fdb4a53e328caa59a8f5863dbf7/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/90d44fdb4a53e328caa59a8f5863dbf7/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/64125a182f3d971168a011bd04a5744b/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/64125a182f3d971168a011bd04a5744b/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/045f8456887bb0812ea9fdb14df8a810/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/045f8456887bb0812ea9fdb14df8a810/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/045f8456887bb0812ea9fdb14df8a810/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,13 +1,17 @@
 <component name="libraryTable">
   <library name="Gradle: com.paypal.android.sdk:data-collector:2.18.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/data-collector-2.18.1.aar/6a9a1a1058fea1940023af4996f62f31/jars/libs/paypal-data-collector-4.0.3.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/data-collector-2.18.1.aar/6a9a1a1058fea1940023af4996f62f31/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/data-collector-2.18.1.aar/6a9a1a1058fea1940023af4996f62f31/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/data-collector-2.18.1.aar/ebcf7e857e5407e65f99987472f9e378/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/data-collector-2.18.1.aar/ebcf7e857e5407e65f99987472f9e378/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/data-collector-2.18.1.aar/ebcf7e857e5407e65f99987472f9e378/jars/libs/paypal-data-collector-4.0.3.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/data-collector-2.18.1.aar/3e3147c57c27ef4610617299de4a6546/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/data-collector-2.18.1.aar/3e3147c57c27ef4610617299de4a6546/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/data-collector-2.18.1.aar/3e3147c57c27ef4610617299de4a6546/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/data-collector-2.18.1.aar/3e3147c57c27ef4610617299de4a6546/jars/libs/paypal-data-collector-4.0.3.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.paypal.android.sdk/data-collector/2.18.1/906bbde76669bb8d90c7ced3506ebe27b87aeced/data-collector-2.18.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/modules-2/files-2.1/com.paypal.android.sdk/data-collector/2.18.1/906bbde76669bb8d90c7ced3506ebe27b87aeced/data-collector-2.18.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-fido:12.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-fido-12.0.1.aar/1c99bb068733fa818caf790081dc849c/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-fido-12.0.1.aar/1c99bb068733fa818caf790081dc849c/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-fido-12.0.1.aar/f08913734d3f905aa4a2bc5b0b290148/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-fido-12.0.1.aar/f08913734d3f905aa4a2bc5b0b290148/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-fido-12.0.1.aar/88f0fc9d519a83ef2b4c2b3cc8262907/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-fido-12.0.1.aar/88f0fc9d519a83ef2b4c2b3cc8262907/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-fido-12.0.1.aar/88f0fc9d519a83ef2b4c2b3cc8262907/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

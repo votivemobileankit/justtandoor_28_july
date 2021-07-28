@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-fitness-license:12.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-fitness-license-12.0.1.aar/d2c5bd61a2a8f86fa8c882e2a67090fd/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-fitness-license-12.0.1.aar/d2c5bd61a2a8f86fa8c882e2a67090fd/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-fitness-license-12.0.1.aar/a1f1c1825ff3a7161f6e10241f6d14c3/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-fitness-license-12.0.1.aar/a1f1c1825ff3a7161f6e10241f6d14c3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-fitness-license-12.0.1.aar/6656950024ed2f211956d9dfa3d97892/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-fitness-license-12.0.1.aar/6656950024ed2f211956d9dfa3d97892/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-fitness-license-12.0.1.aar/6656950024ed2f211956d9dfa3d97892/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

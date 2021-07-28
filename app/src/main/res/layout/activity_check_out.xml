@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -43,8 +42,8 @@
                         <com.justtannoor.justtannoor.custom.TextViewHead
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="20dp"
                             android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
                             android:gravity="center"
                             android:text="Contact Us"
                             android:textColor="@color/colorPrimaryDark"
@@ -103,9 +102,9 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginEnd="5dp"
                             android:layout_marginStart="5dp"
                             android:layout_marginTop="2dp"
+                            android:layout_marginEnd="5dp"
                             android:background="@color/colorSeprator"></View>
 
                         <!--Last name value -->
@@ -160,9 +159,9 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginEnd="5dp"
                             android:layout_marginStart="5dp"
                             android:layout_marginTop="2dp"
+                            android:layout_marginEnd="5dp"
                             android:background="@color/colorSeprator"></View>
 
 
@@ -219,9 +218,9 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginEnd="5dp"
                             android:layout_marginStart="5dp"
                             android:layout_marginTop="2dp"
+                            android:layout_marginEnd="5dp"
                             android:background="@color/colorSeprator"></View>
 
                         <RelativeLayout
@@ -290,18 +289,18 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginEnd="5dp"
                             android:layout_marginStart="5dp"
                             android:layout_marginTop="2dp"
+                            android:layout_marginEnd="5dp"
                             android:background="@color/colorSeprator"></View>
 
                         <!--Address-->
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:minHeight="64dp"
                             android:layout_marginTop="5dp"
                             android:background="@android:color/transparent"
+                            android:minHeight="64dp"
                             android:padding="1dp">
 
                             <com.justtannoor.justtannoor.custom.TextViewHead
@@ -335,13 +334,13 @@
                                 android:id="@+id/edtInfoAddress"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:minHeight="40dp"
                                 android:layout_below="@+id/tstAddressHeading"
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginStart="5dp"
                                 android:layout_toStartOf="@+id/imgPlacePicker"
                                 android:background="@null"
                                 android:hint=""
+                                android:minHeight="40dp"
                                 android:textColor="@android:color/black"
                                 android:textColorHint="@color/colorHintText"
                                 android:textSize="12sp" />
@@ -350,11 +349,11 @@
                                 android:id="@+id/imgPlacePicker"
                                 android:layout_width="50dp"
                                 android:layout_height="40dp"
-                                android:layout_alignParentEnd="true"
                                 android:layout_below="@+id/tstAddressHeading"
+                                android:layout_alignParentEnd="true"
                                 android:background="@null"
                                 android:paddingStart="20dp"
-                                android:src="@drawable/img_btm_map_act"/>
+                                android:src="@drawable/img_btm_map_act" />
                             <!-- <com.tannoor.justtannoor.custom.CustomEdittext
                                 android:layout_below="@+id/tstAddressHeading"
                                 android:id="@+id/edtInfoAddress"
@@ -372,9 +371,9 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginEnd="5dp"
                             android:layout_marginStart="5dp"
                             android:layout_marginTop="2dp"
+                            android:layout_marginEnd="5dp"
                             android:background="@color/colorSeprator"></View>
 
                         <!--Date time-->
@@ -426,9 +425,9 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginEnd="5dp"
                             android:layout_marginStart="5dp"
                             android:layout_marginTop="2dp"
+                            android:layout_marginEnd="5dp"
                             android:background="@color/colorSeprator">
 
                         </View>
@@ -475,17 +474,16 @@
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginStart="5dp"
                                 android:background="@null"
-                                android:textSize="14sp"
-                                />
+                                android:textSize="14sp" />
 
                         </RelativeLayout>
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginEnd="5dp"
                             android:layout_marginStart="5dp"
                             android:layout_marginTop="2dp"
+                            android:layout_marginEnd="5dp"
                             android:background="@color/colorSeprator"></View>
 
                         <!-- pickup method -->
@@ -539,6 +537,7 @@
                                     android:layout_gravity="center_horizontal"
                                     android:checked="true"
                                     android:gravity="center"
+                                    android:onClick="onRadioButtonClicked"
                                     android:text="Pick up\nاستلام"
                                     android:textSize="14sp" />
 
@@ -548,8 +547,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
                                     android:layout_marginStart="50dp"
-                                   android:gravity="center"
                                     android:checked="false"
+                                    android:gravity="center"
                                     android:text="Delivery\nتوصيل"
                                     android:textSize="14sp" />
                             </RadioGroup>
@@ -611,18 +610,18 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginEnd="5dp"
                             android:layout_marginStart="5dp"
                             android:layout_marginTop="2dp"
+                            android:layout_marginEnd="5dp"
                             android:background="@color/colorSeprator"></View>
 
                         <Button
                             android:id="@+id/btn_signup"
                             android:layout_width="fill_parent"
                             android:layout_height="40dp"
-                            android:layout_marginEnd="20dp"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
                             android:background="@color/colorPrimary"
                             android:text="Submit"
                             android:textColor="@android:color/white"
@@ -655,9 +654,9 @@
                         android:id="@+id/tstPaymentHeading"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_toRightOf="@+id/ivPartialIcon"
                         android:background="@color/colorWhite"
                         android:gravity="start|top"
@@ -681,9 +680,9 @@
                                 android:id="@+id/tstOrderPriceText"
                                 android:layout_width="160dp"
                                 android:layout_height="match_parent"
-                                android:layout_marginEnd="10dp"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="15dp"
+                                android:layout_marginEnd="10dp"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
                                 android:text="Order Price:\nسعر الطلب"
@@ -693,12 +692,12 @@
 
                             <com.justtannoor.justtannoor.custom.TextViewHead
                                 android:id="@+id/tstOrderPrice"
-                                android:layout_toEndOf="@+id/tstOrderPriceText"
                                 android:layout_width="150dp"
                                 android:layout_height="match_parent"
-                                android:layout_marginEnd="10dp"
                                 android:layout_marginStart="0dp"
                                 android:layout_marginTop="15dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_toEndOf="@+id/tstOrderPriceText"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
                                 android:text=""
@@ -712,28 +711,28 @@
                             android:layout_width="match_parent"
                             android:layout_height="60dp">
 
-                        <com.justtannoor.justtannoor.custom.TextViewHead
-                            android:id="@+id/tstDlChargeText"
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:background="@color/colorWhite"
-                            android:gravity="center"
-                            android:text="Delivery Charges:\nرسوم التوصيل"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="14sp"
-                            android:visibility="visible" />
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstDlChargeText"
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@color/colorWhite"
+                                android:gravity="center"
+                                android:text="Delivery Charges:\nرسوم التوصيل"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
 
                             <com.justtannoor.justtannoor.custom.TextViewHead
                                 android:id="@+id/tstDlCharge"
-                                android:layout_toEndOf="@+id/tstDlChargeText"
                                 android:layout_width="160dp"
                                 android:layout_height="match_parent"
-                                android:layout_marginEnd="10dp"
                                 android:layout_marginStart="0dp"
                                 android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_toEndOf="@+id/tstDlChargeText"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
                                 android:text=""
@@ -752,9 +751,9 @@
                                 android:id="@+id/tstDicountPriceText"
                                 android:layout_width="160dp"
                                 android:layout_height="match_parent"
-                                android:layout_marginEnd="10dp"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
                                 android:text="Discount:\nالتخفيض"
@@ -764,12 +763,12 @@
 
                             <com.justtannoor.justtannoor.custom.TextViewHead
                                 android:id="@+id/tstDicountPrice"
-                                android:layout_toEndOf="@+id/tstDicountPriceText"
                                 android:layout_width="150dp"
                                 android:layout_height="match_parent"
-                                android:layout_marginEnd="10dp"
                                 android:layout_marginStart="0dp"
                                 android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_toEndOf="@+id/tstDicountPriceText"
                                 android:background="@color/colorWhite"
                                 android:gravity="center"
                                 android:text=""
@@ -780,44 +779,40 @@
                         </RelativeLayout>
 
 
-
-
-
-
                         <!--End of discount price -->
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="60dp">
 
-                        <com.justtannoor.justtannoor.custom.TextViewHead
-                            android:id="@+id/tstTotalPriceText"
+                            <com.justtannoor.justtannoor.custom.TextViewHead
+                                android:id="@+id/tstTotalPriceText"
 
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:background="@color/colorWhite"
-                            android:gravity="center"
-                            android:text="Total Price:\nالسعر الكلي"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="14sp"
-                            android:visibility="visible" />
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@color/colorWhite"
+                                android:gravity="center"
+                                android:text="Total Price:\nالسعر الكلي"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
 
                             <com.justtannoor.justtannoor.custom.TextViewHead
-                            android:id="@+id/tstTotalPrice"
+                                android:id="@+id/tstTotalPrice"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
                                 android:layout_toEndOf="@+id/tstTotalPriceText"
-                            android:layout_width="150dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginStart="0dp"
-                            android:layout_marginTop="5dp"
-                            android:background="@color/colorWhite"
-                            android:gravity="center"
-                            android:text=""
-                            android:textColor="@color/colorBlack"
-                            android:textSize="14sp"
-                            android:visibility="visible" />
+                                android:background="@color/colorWhite"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/colorBlack"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
 
                         </RelativeLayout>
 
@@ -825,10 +820,10 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="60dp"
-                            android:layout_marginBottom="20dp"
-                            android:layout_marginEnd="10dp"
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="20dp"
                             android:background="@color/colorWhite"
                             android:orientation="horizontal"
                             android:padding="2dp"
@@ -846,9 +841,9 @@
                                     android:layout_width="30dp"
                                     android:layout_height="50dp"
                                     android:layout_centerVertical="true"
-                                    android:layout_marginBottom="1dp"
                                     android:layout_marginStart="1dp"
                                     android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
                                     android:background="@color/colorWhite"
                                     android:padding="8dp"
                                     android:src="@drawable/ic_add"
@@ -858,10 +853,10 @@
                                     android:id="@+id/tstPartialPayment"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_marginBottom="1dp"
-                                    android:layout_marginEnd="1dp"
                                     android:layout_marginStart="1dp"
                                     android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="1dp"
+                                    android:layout_marginBottom="1dp"
                                     android:layout_toRightOf="@+id/ivPartialIcon"
                                     android:background="@color/colorPrimary"
                                     android:gravity="center"
@@ -901,9 +896,9 @@
                                     android:layout_width="30dp"
                                     android:layout_height="50dp"
                                     android:layout_centerVertical="true"
-                                    android:layout_marginBottom="1dp"
                                     android:layout_marginStart="1dp"
                                     android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
                                     android:background="@color/colorWhite"
                                     android:padding="8dp"
                                     android:src="@drawable/ic_add"
@@ -913,10 +908,10 @@
                                     android:id="@+id/tstFullPayment"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_marginBottom="1dp"
-                                    android:layout_marginEnd="1dp"
                                     android:layout_marginStart="1dp"
                                     android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="1dp"
+                                    android:layout_marginBottom="1dp"
                                     android:layout_toRightOf="@+id/ivFullIcon"
                                     android:background="@color/colorPrimary"
                                     android:gravity="center"
@@ -948,13 +943,13 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="60dp"
-                            android:layout_marginBottom="20dp"
-                            android:layout_marginEnd="10dp"
                             android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="20dp"
                             android:background="@color/colorWhite"
-                            android:visibility="gone"
                             android:orientation="horizontal"
-                            android:padding="2dp">
+                            android:padding="2dp"
+                            android:visibility="gone">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -967,9 +962,9 @@
                                     android:layout_width="30dp"
                                     android:layout_height="50dp"
                                     android:layout_centerVertical="true"
-                                    android:layout_marginBottom="1dp"
                                     android:layout_marginStart="1dp"
                                     android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
                                     android:background="@color/colorWhite"
                                     android:padding="8dp"
                                     android:src="@drawable/ic_add"
@@ -979,10 +974,10 @@
                                     android:id="@+id/tstBankTransferPayment"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_marginBottom="1dp"
-                                    android:layout_marginEnd="1dp"
                                     android:layout_marginStart="1dp"
                                     android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="1dp"
+                                    android:layout_marginBottom="1dp"
                                     android:layout_toRightOf="@+id/ivBankTransferIcon"
                                     android:background="@color/colorPrimary"
                                     android:gravity="center"
@@ -1059,9 +1054,9 @@
                     <Button
                         android:layout_width="fill_parent"
                         android:layout_height="40dp"
-                        android:layout_marginEnd="20dp"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
                         android:background="@color/colorPrimary"
                         android:text="Submit"
                         android:textColor="@android:color/white"

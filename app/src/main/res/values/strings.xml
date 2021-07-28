@@ -8,7 +8,9 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="DemoText">Votive Tech</string>
-
+    <!--<string name="google_maps_key">AIzaSyBbWwjIgI4ngq4YbjtGskLICu6xaKTeT2M</string>-->
+    <!--<string name="google_maps_key">AIzaSyAL64Fv43m5hxgFsxcoKoUHmS6yRqY1AVk</string>-->
+    <string name="google_maps_key">AIzaSyBZgxid1Fh92hgnuhbmvzSBFfr2neC-rU0</string>
 
     <!--  <string name="facebook_app_id">417423762052986</string>-->
     <string name="facebook_app_id">417423762052986</string>

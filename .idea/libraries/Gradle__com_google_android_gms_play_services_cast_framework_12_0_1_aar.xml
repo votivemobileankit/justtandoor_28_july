@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-cast-framework:12.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/80d63dbc63e1b858567eaca537c633c0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/80d63dbc63e1b858567eaca537c633c0/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/fdb2ee2c9108eb4d139fe63a8dde2b4d/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/fdb2ee2c9108eb4d139fe63a8dde2b4d/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/62075af714d6d42218b1bd98157a8e8e/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/62075af714d6d42218b1bd98157a8e8e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/62075af714d6d42218b1bd98157a8e8e/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-nearby-license:12.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-nearby-license-12.0.1.aar/82c931086942d436dca68d40de52b70c/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-nearby-license-12.0.1.aar/82c931086942d436dca68d40de52b70c/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-nearby-license-12.0.1.aar/98ef76060b73f395cdd2f6c75aed4ecd/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-nearby-license-12.0.1.aar/98ef76060b73f395cdd2f6c75aed4ecd/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-nearby-license-12.0.1.aar/5748b8ff2b12ca8e4189f7cefe2de37f/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-nearby-license-12.0.1.aar/5748b8ff2b12ca8e4189f7cefe2de37f/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-nearby-license-12.0.1.aar/5748b8ff2b12ca8e4189f7cefe2de37f/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

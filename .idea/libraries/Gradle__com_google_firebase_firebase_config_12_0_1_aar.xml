@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-config:12.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-config-12.0.1.aar/8f7e37faca1b79c8abddf678280fc924/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-config-12.0.1.aar/8f7e37faca1b79c8abddf678280fc924/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/firebase-config-12.0.1.aar/2e270e6e1f6f38018df7313eb679eaaa/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/firebase-config-12.0.1.aar/2e270e6e1f6f38018df7313eb679eaaa/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-config-12.0.1.aar/dfa291a2be4cd59f88d342c8f3846817/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-config-12.0.1.aar/dfa291a2be4cd59f88d342c8f3846817/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-config-12.0.1.aar/dfa291a2be4cd59f88d342c8f3846817/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

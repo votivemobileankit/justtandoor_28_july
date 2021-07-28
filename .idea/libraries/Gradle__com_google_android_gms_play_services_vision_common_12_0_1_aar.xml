@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-vision-common:12.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-12.0.1.aar/fe79d986ce7683c6b38ce79cc8697985/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-12.0.1.aar/fe79d986ce7683c6b38ce79cc8697985/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-vision-common-12.0.1.aar/eed9e8369cce0a0c690a25cf2967f042/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-vision-common-12.0.1.aar/eed9e8369cce0a0c690a25cf2967f042/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-12.0.1.aar/e87eb03624b4e06232e6f0504a2d2317/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-12.0.1.aar/e87eb03624b4e06232e6f0504a2d2317/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-12.0.1.aar/e87eb03624b4e06232e6f0504a2d2317/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,15 +1,19 @@
 <component name="libraryTable">
   <library name="Gradle: com.braintreepayments.api:braintree:2.18.1@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/braintree-2.18.1.aar/fe73c8cec5c59774af0ef3a704c5ea8c/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/braintree-2.18.1.aar/c3c0dbc27faba1a2a271ef317bc8737d/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/braintree-2.18.1.aar/0a2639b6a861ba59b23d5d03a17b6be9/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/braintree-2.18.1.aar/fe73c8cec5c59774af0ef3a704c5ea8c/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/braintree-2.18.1.aar/fe73c8cec5c59774af0ef3a704c5ea8c/res" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/braintree-2.18.1.aar/c3c0dbc27faba1a2a271ef317bc8737d/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/braintree-2.18.1.aar/c3c0dbc27faba1a2a271ef317bc8737d/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/braintree-2.18.1.aar/0a2639b6a861ba59b23d5d03a17b6be9/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/braintree-2.18.1.aar/0a2639b6a861ba59b23d5d03a17b6be9/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/braintree-2.18.1.aar/0a2639b6a861ba59b23d5d03a17b6be9/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.braintreepayments.api/braintree/2.18.1/c87f63b7093388c1bbc79f30cf83a3f975b5c0d/braintree-2.18.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/modules-2/files-2.1/com.braintreepayments.api/braintree/2.18.1/c87f63b7093388c1bbc79f30cf83a3f975b5c0d/braintree-2.18.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

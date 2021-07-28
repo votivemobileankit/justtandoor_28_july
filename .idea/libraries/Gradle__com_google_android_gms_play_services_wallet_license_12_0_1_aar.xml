@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-wallet-license:12.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-wallet-license-12.0.1.aar/11b6d928f61d3df47879f043c0380a09/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-wallet-license-12.0.1.aar/11b6d928f61d3df47879f043c0380a09/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-wallet-license-12.0.1.aar/5f677b8cf7985cfb8a33d2a4233f16ba/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-wallet-license-12.0.1.aar/5f677b8cf7985cfb8a33d2a4233f16ba/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-wallet-license-12.0.1.aar/a3a948fb3db38773a3977ca3ed48a652/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-wallet-license-12.0.1.aar/a3a948fb3db38773a3977ca3ed48a652/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-wallet-license-12.0.1.aar/a3a948fb3db38773a3977ca3ed48a652/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

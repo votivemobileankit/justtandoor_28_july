@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-safetynet:12.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-safetynet-12.0.1.aar/b6cf09be940aeaa7d8ae3baeea29edfc/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-safetynet-12.0.1.aar/b6cf09be940aeaa7d8ae3baeea29edfc/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-safetynet-12.0.1.aar/4afb3b3533cad61cb37b363e687aa726/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-safetynet-12.0.1.aar/4afb3b3533cad61cb37b363e687aa726/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-safetynet-12.0.1.aar/d761f505a6f49f3dd36e4dd57e51abe6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-safetynet-12.0.1.aar/d761f505a6f49f3dd36e4dd57e51abe6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-safetynet-12.0.1.aar/d761f505a6f49f3dd36e4dd57e51abe6/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

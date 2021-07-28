@@ -1,5 +1,6 @@
 package com.justtannoor.justtannoor.activity;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -35,15 +36,13 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.Places;
-import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.libraries.places.api.model.Place;
+import com.google.android.libraries.places.widget.Autocomplete;
+import com.google.android.libraries.places.widget.model.AutocompleteActivityMode;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.RequestParams;
-import com.loopj.android.http.TextHttpResponseHandler;
 import com.justtannoor.justtannoor.R;
 import com.justtannoor.justtannoor.Utilities.Constant;
 import com.justtannoor.justtannoor.custom.CustomEdittext;
@@ -53,6 +52,9 @@ import com.justtannoor.justtannoor.model.CounterResponse;
 import com.justtannoor.justtannoor.model.GetTokenModel;
 import com.justtannoor.justtannoor.retrofit.BaseRequest;
 import com.justtannoor.justtannoor.retrofit.RequestReciever;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.RequestParams;
+import com.loopj.android.http.TextHttpResponseHandler;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
@@ -60,6 +62,7 @@ import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -78,8 +81,8 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
     private static final int BRAINTREE_REQUEST_CODE = 4949;
     private final static int PLACE_PICKER_REQUEST = 123;
 
-    private CustomEdittext edtInfoName, edtInfoLastName, edtInfoEmail, edtInfoMobile,edtPostalCode;
-        private TextViewHead edtInfoAddress;
+    private CustomEdittext edtInfoName, edtInfoLastName, edtInfoEmail, edtInfoMobile, edtPostalCode;
+    private TextViewHead edtInfoAddress;
     private Button btnSubmite = null;
     private Context mContext = null;
     private TextViewHead tstPartialPayment = null, edtInfoTime, edtInfoDate;
@@ -119,6 +122,7 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
     private int mOfferDicountPrice = 0;
     //  private int  amt1 = 0;
     private int mFixKMDeliveryCharge = 0;
+    private List<com.google.android.libraries.places.api.model.Place.Field> fields;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,7 +130,7 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
         setContentView(R.layout.activity_check_out);
 
         mContext = this;
-        setUpGClient();
+        //      setUpGClient();
         initView();
        /* Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Full Payment");
@@ -142,11 +146,16 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
     }*/
 
     private void initView() {
+
+        com.google.android.libraries.places.api.Places.initialize(CheckOutActivity.this, getResources().getString(R.string.google_maps_key));
+
+        fields = Arrays.asList(com.google.android.libraries.places.api.model.Place.Field.LAT_LNG, com.google.android.libraries.places.api.model.Place.Field.NAME, com.google.android.libraries.places.api.model.Place.Field.ADDRESS_COMPONENTS);
         baseRequest = new BaseRequest(this);
         getSupportActionBar().setSubtitle("الخروج");
         //   private CustomEdittext edtInfoName, edtInfoEmail, edtInfoMobile, edtInfoAddress;
 
         mCounterResponse = (CounterResponse) getIntent().getSerializableExtra("mCounterValue");
+
         int mm = mCounterResponse.getType();
         mAndroidDeviceID = Settings.Secure.getString(getApplicationContext().getContentResolver(),
                 Settings.Secure.ANDROID_ID);
@@ -159,6 +168,8 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
         edtInfoName = (CustomEdittext) findViewById(R.id.edtInfoName);
         edtInfoLastName = (CustomEdittext) findViewById(R.id.edtInfoLastName);
         mRadioGroup = (RadioGroup) findViewById(R.id.mRadioGroup);
+        mRadioButtonPicup = findViewById(R.id.mRadioButtonPicup);
+        mRadioButtonDelivery = findViewById(R.id.mRadioButtonDelivery);
         edtInfoEmail = (CustomEdittext) findViewById(R.id.edtInfoEmail);
         edtInfoMobile = (CustomEdittext) findViewById(R.id.edtInfoMobile);
         edtInfoAddress = findViewById(R.id.edtInfoAddress);
@@ -215,19 +226,38 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
 
         tstDicountPrice.setText("AED " + mOfferDicountPrice);
 
-
-        mRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-
+        mRadioButtonDelivery.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
+            public void onClick(View v) {
                 mAddress = edtInfoAddress.getText().toString().trim();
 
                 if (mAddress == null || mAddress.equalsIgnoreCase("") || mAddress.equalsIgnoreCase("Null")) {
                     edtInfoAddress.setError("Please enter delivery address.");
+
+//                    mRadioButtonDelivery.setEnabled(false);
+//                    mRadioButtonPicup.setEnabled(true);
+                    Toast.makeText(CheckOutActivity.this, "please enter adress", Toast.LENGTH_SHORT).show();
+                    mRadioButtonDelivery.setChecked(false);
+                    mRadioButtonPicup.setChecked(true);
+                } else {
+                    mRadioButtonDelivery.setChecked(true);
+                    mRadioButtonPicup.setChecked(false);
+                    mDeliveryMethod = "Delivery";
+                    getLocationFromAddress(mAddress);
                 }
-                // find which radio button is selected
-                if (checkedId == R.id.mRadioButtonPicup) {
+
+            }
+        });
+        mRadioButtonPicup.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
+            @Override
+            public void onClick(View v) {
+            //    mAddress = edtInfoAddress.getText().toString().trim();
+
+//                if (mAddress == null || mAddress.equalsIgnoreCase("") || mAddress.equalsIgnoreCase("Null")) {
+//                    edtInfoAddress.setError("Please enter delivery address.");
+//                } else {
                     mDeliveryMethod = "Pickup";
                     // tstDlCharge.setText("Delivery Charge: 0");
                     tstDlCharge.setText("AED 0");
@@ -251,14 +281,56 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
                         mMinimumAmount = Constant.TOTAL_PRICE;
                         mTotalPriceAMT = Constant.TOTAL_PRICE;
                     }
-                    //  getLocationFromAddress(mAddress);
-                    // Toast.makeText(getApplicationContext(), "choice: Pickup", Toast.LENGTH_SHORT).show();
-                } else if (checkedId == R.id.mRadioButtonDelivery) {
-                    mDeliveryMethod = "Delivery";
-                    getLocationFromAddress(mAddress);
-                    // Toast.makeText(getApplicationContext(), "choice: Delivery", Toast.LENGTH_SHORT).show();
-                }
+              //  }
+
+
             }
+        });
+        mRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+            @RequiresApi(api = Build.VERSION_CODES.N)
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                mAddress = edtInfoAddress.getText().toString().trim();
+
+
+                if (mAddress == null || mAddress.equalsIgnoreCase("") || mAddress.equalsIgnoreCase("Null")) {
+                    edtInfoAddress.setError("Please enter delivery address.");
+                } else {
+                    if (checkedId == R.id.mRadioButtonPicup) {
+                        mDeliveryMethod = "Pickup";
+                        // tstDlCharge.setText("Delivery Charge: 0");
+                        tstDlCharge.setText("AED 0");
+
+                        mDeliveryCharges = 0;
+
+                        if (Constant.TOTAL_AMOUNT_FOR_CHECKOUT > Constant.TOTAL_DISCOUNT_PRICE) {
+
+                            mTotal_Discount = (Constant.TOTAL_AMOUNT_FOR_CHECKOUT * Constant.TOTAL_OFFER_PERCENTAGE) / 100;
+                            mOfferDicountPrice = mTotal_Discount;
+                            ADP_Price = Constant.TOTAL_AMOUNT_FOR_CHECKOUT - mTotal_Discount;
+                            //mDeliveryCharges
+                            // mTotalPriceAMT =  ADP_Price + mDeliveryCharges;
+                            mTotalPriceAMT = ADP_Price;
+                            tstTotalPrice.setText("AED " + mTotalPriceAMT);
+                            //   Toast.makeText(mContext, " ADP_Price = "+ADP_Price + "\n mTotal_Discount = " + mTotal_Discount  , Toast.LENGTH_LONG).show();
+                            //  calladdpaymentInfoAPI();
+                        } else {
+                            mOfferDicountPrice = 0;
+                            tstTotalPrice.setText("AED " + Constant.TOTAL_PRICE);
+                            mMinimumAmount = Constant.TOTAL_PRICE;
+                            mTotalPriceAMT = Constant.TOTAL_PRICE;
+                        }
+                        //  getLocationFromAddress(mAddress);
+                        // Toast.makeText(getApplicationContext(), "choice: Pickup", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+
+            }
+            // find which radio button is selected
+
+            // }
 
         });
 
@@ -298,63 +370,199 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
             mFixKMDeliveryCharge = mCounterResponse.getFixKilometreDeliveryCharge();////////50 AED
 
             int amt = Constant.TOTAL_PRICE + mFixKMDeliveryCharge;
+            double per_kilometre_delivery_charge = mCounterResponse.getPerKilometreDeliveryCharge();
 
             //double dist = distanceInLikometer;
             dist = distanceInLikometer;
-            if (dist > 30) {
-                double mDist = dist - 30;
-                //mDayCount = toIntExact(elapsedDays);
-                // int mmDist =  (int) (mDist*1.5);
-                int mmDist = (((int) dist) * ((int) mCounterResponse.getPerKilometreDeliveryCharge()));
-                // int mmDist = (int) (mDist * mCounterResponse.getPerKilometreDeliveryCharge());
-                mTotalPriceAMT = amt + mmDist;
-                mDeliveryCharges = mFixKMDeliveryCharge + mmDist;
-                //  Toast.makeText(this,"distanceInMeters==>>"+distanceInLikometer,Toast.LENGTH_SHORT).show();
-                //  Toast.makeText(this,"Constant.TOTAL_PRICE==>>"+mTotalPriceAMT,Toast.LENGTH_LONG).show();
-            } else {
-                mTotalPriceAMT = amt;
-                mDeliveryCharges = mFixKMDeliveryCharge;
-            }
 
-            if (Constant.TOTAL_AMOUNT_FOR_CHECKOUT > Constant.TOTAL_DISCOUNT_PRICE) {
 
-                mTotal_Discount = (Constant.TOTAL_AMOUNT_FOR_CHECKOUT * Constant.TOTAL_OFFER_PERCENTAGE) / 100;
-                mOfferDicountPrice = mTotal_Discount;
-                ADP_Price = Constant.TOTAL_AMOUNT_FOR_CHECKOUT - mTotal_Discount;
+//            Constant.TOTAL_DISCOUNT_PRICE = discount_price
+//            Constant.MINIMUM_ORDER_OUTOF_ABU = minimum_order_price;
+//            Constant.TOTAL_OFFER_PERCENTAGE = total_offer_percentage
+//            Constant.TOTAL_AMOUNT_FOR_CHECKOUT = total_price
+            if (dist <= 30) {
+                Log.e("in delivery click", "===" + "through delivery method");
+                int discountPriceInt = Constant.TOTAL_DISCOUNT_PRICE;
+                int totalPriceInt = Constant.TOTAL_AMOUNT_FOR_CHECKOUT;
 
-                //mDeliveryCharges
-                mTotalPriceAMT = ADP_Price + mDeliveryCharges;
+                if (totalPriceInt > discountPriceInt) {
 
-                tstTotalPrice.setText("AED " + mTotalPriceAMT);
+                    int discount_value = (Constant.TOTAL_AMOUNT_FOR_CHECKOUT * Constant.TOTAL_AMOUNT_FOR_CHECKOUT) / 100;
+                    //   self.lblOrderPrice.text = Constant.TOTAL_AMOUNT_FOR_CHECKOUT;
+                    tstOrderPrice.setText("AED " + Constant.TOTAL_AMOUNT_FOR_CHECKOUT);
+                    // self.lblDeliveryCharge.text = self.DeliveryAmount
+                    tstDlCharge.setText("AED " + mFixKMDeliveryCharge);
+                    //   self.lblDiscountAmount.text = String(discount_value)
+                    tstDicountPrice.setText("AED " + discount_value);
 
-                //  Toast.makeText(mContext, " ADP_Price = "+ADP_Price + "\n mTotal_Discount = " + mTotal_Discount  , Toast.LENGTH_LONG).show();
-                //    calladdpaymentInfoAPI();
-            } else {
-                mOfferDicountPrice = 0;
-                if (dist > 50) {
-                    if (Constant.TOTAL_AMOUNT_FOR_CHECKOUT > Constant.MINIMUM_ORDER_OUTOF_ABU) {
 
-                        mTotalPriceAMT = Constant.TOTAL_AMOUNT_FOR_CHECKOUT + mDeliveryCharges;
+                    int totalPayWithDiscount = (Constant.TOTAL_AMOUNT_FOR_CHECKOUT - discount_value) + mFixKMDeliveryCharge;
+                    //    self.lblTotalAmount.text =""+totalPayWithDiscount;
+                    tstTotalPrice.setText("AED " + totalPayWithDiscount);
 
-                        tstTotalPrice.setText("AED " + mTotalPriceAMT);
+                    mTotalPriceAMT = totalPayWithDiscount;
+                    mOfferDicountPrice = discount_value;
+                    mDeliveryCharges = mFixKMDeliveryCharge;
+                    //self.present(CommonClass().Alert(title: "Delivery Charges", msg:(String.init(format:"Delivery charge AED 50 and Total amount AED %.01f",totalPayWithDiscount))), animated: false, completion: nil)
 
-                        //calladdpaymentInfoAPI();
-                    } else {
-                        //////If Distance Greater then 50 KM then minimum order should be 1500 AED
+                } else {
 
-                        Toast.makeText(mContext, "If distance greater then 50 KM then minimum order should be greater then " + Constant.MINIMUM_ORDER_OUTOF_ABU + " AED", Toast.LENGTH_LONG).show();
-                    }
+                    int totalpaywithdeleverycharge = Constant.TOTAL_AMOUNT_FOR_CHECKOUT + mFixKMDeliveryCharge;
+                    tstOrderPrice.setText("AED " + Constant.TOTAL_AMOUNT_FOR_CHECKOUT);
+                    tstDlCharge.setText("AED " + mFixKMDeliveryCharge);
+                    tstDicountPrice.setText("AED " + "0");
+                    tstTotalPrice.setText("AED " + totalpaywithdeleverycharge);
+
+                    mOfferDicountPrice = 0;
+                    mDeliveryCharges = mFixKMDeliveryCharge;
+                    mTotalPriceAMT = totalpaywithdeleverycharge;
                 }
-                //  tstDlCharge.setText("AED " + mDeliveryCharges);
+
+            } else if (dist > 30) {
+                Log.e("in delivery click", "===" + "through delivery method");
+                int MinimumOrderPriceInt = Constant.MINIMUM_ORDER_OUTOF_ABU;
+                int totlePriceInt = Constant.TOTAL_AMOUNT_FOR_CHECKOUT;
+                if (totlePriceInt > MinimumOrderPriceInt) {
+                    if (Constant.TOTAL_AMOUNT_FOR_CHECKOUT > Constant.TOTAL_DISCOUNT_PRICE) {
+                        double temp = per_kilometre_delivery_charge;
+                        double temp1 = dist - 30;
+                        double temp2 = (temp1 * temp);
+
+                        double DeliveryAmount = mFixKMDeliveryCharge + temp2;
+
+                        int discount_value = (Constant.TOTAL_AMOUNT_FOR_CHECKOUT * Constant.TOTAL_OFFER_PERCENTAGE) / 100;
+
+                        tstOrderPrice.setText("AED " + Constant.TOTAL_AMOUNT_FOR_CHECKOUT);
+                        tstDlCharge.setText("AED " + DeliveryAmount);
+
+                        tstDicountPrice.setText("AED " + discount_value);
+
+                        double totalPayWithDiscount = (Constant.TOTAL_AMOUNT_FOR_CHECKOUT - discount_value) + mFixKMDeliveryCharge + temp2;
+
+                        tstTotalPrice.setText("AED " + totalPayWithDiscount);
+
+                        mOfferDicountPrice = discount_value;
+                        mDeliveryCharges = (int) DeliveryAmount;
+                        mTotalPriceAMT = (int) totalPayWithDiscount;
+
+                    } else {
+                        double temp = per_kilometre_delivery_charge;
+                        double temp1 = dist - 30;
+                        double temp2 = temp1 * temp;
+
+                        double total = Constant.TOTAL_AMOUNT_FOR_CHECKOUT + mFixKMDeliveryCharge + temp2;
+
+                        double DeliveryAmount = mFixKMDeliveryCharge + temp2;
+
+                        tstOrderPrice.setText("AED " + Constant.TOTAL_AMOUNT_FOR_CHECKOUT);
+                        tstDlCharge.setText("AED " + DeliveryAmount);
+                        tstDicountPrice.setText("AED " + "0");
+                        tstTotalPrice.setText("AED " + total);
+
+                        mOfferDicountPrice = 0;
+                        mDeliveryCharges = (int) DeliveryAmount;
+                        mTotalPriceAMT = (int) total;
+                    }
+
+                } else {
+
+
+//                    mRadioButtonDelivery.setEnabled(false);
+//                    mRadioButtonPicup.setEnabled(true);
+
+                    mRadioButtonDelivery.setChecked(false);
+                    mRadioButtonPicup.setChecked(true);
+                    mDeliveryMethod = "Pickup";
+
+                    Toast.makeText(CheckOutActivity.this, "Minimum order should be greater than " +
+                            MinimumOrderPriceInt, Toast.LENGTH_LONG).show();
+
+                }
+            } else {
+                PickupMethod();
             }
-            tstDlCharge.setText("AED " + mDeliveryCharges);
-            tstTotalPrice.setText("AED " + mTotalPriceAMT);
+
+
+//            if (dist > 30) {
+//                double mDist = dist - 30;
+//                //mDayCount = toIntExact(elapsedDays);
+//                // int mmDist =  (int) (mDist*1.5);
+//                int mmDist = (((int) dist) * ((int) mCounterResponse.getPerKilometreDeliveryCharge()));
+//                // int mmDist = (int) (mDist * mCounterResponse.getPerKilometreDeliveryCharge());
+//                mTotalPriceAMT = amt + mmDist;
+//                mDeliveryCharges = mFixKMDeliveryCharge + mmDist;
+//                //  Toast.makeText(this,"distanceInMeters==>>"+distanceInLikometer,Toast.LENGTH_SHORT).show();
+//                //  Toast.makeText(this,"Constant.TOTAL_PRICE==>>"+mTotalPriceAMT,Toast.LENGTH_LONG).show();
+//            } else {
+//                mTotalPriceAMT = amt;
+//                mDeliveryCharges = mFixKMDeliveryCharge;
+//            }
+//
+//            if (Constant.TOTAL_AMOUNT_FOR_CHECKOUT > Constant.TOTAL_DISCOUNT_PRICE) {
+//
+//                mTotal_Discount = (Constant.TOTAL_AMOUNT_FOR_CHECKOUT * Constant.TOTAL_OFFER_PERCENTAGE) / 100;
+//                mOfferDicountPrice = mTotal_Discount;
+//                ADP_Price = Constant.TOTAL_AMOUNT_FOR_CHECKOUT - mTotal_Discount;
+//
+//                //mDeliveryCharges
+//                mTotalPriceAMT = ADP_Price + mDeliveryCharges;
+//
+//                tstTotalPrice.setText("AED " + mTotalPriceAMT);
+//
+//                //  Toast.makeText(mContext, " ADP_Price = "+ADP_Price + "\n mTotal_Discount = " + mTotal_Discount  , Toast.LENGTH_LONG).show();
+//                //    calladdpaymentInfoAPI();
+//            } else {
+//                mOfferDicountPrice = 0;
+//                if (dist > 50) {
+//                    if (Constant.TOTAL_AMOUNT_FOR_CHECKOUT > Constant.MINIMUM_ORDER_OUTOF_ABU) {
+//
+//                        mTotalPriceAMT = Constant.TOTAL_AMOUNT_FOR_CHECKOUT + mDeliveryCharges;
+//
+//                        tstTotalPrice.setText("AED " + mTotalPriceAMT);
+//
+//                        //calladdpaymentInfoAPI();
+//                    } else {
+//                        //////If Distance Greater then 50 KM then minimum order should be 1500 AED
+//
+//                        Toast.makeText(mContext, "If distance greater then 50 KM then minimum order should be greater then " + Constant.MINIMUM_ORDER_OUTOF_ABU + " AED", Toast.LENGTH_LONG).show();
+//                    }
+//                }
+//                //  tstDlCharge.setText("AED " + mDeliveryCharges);
+//            }
+//            tstDlCharge.setText("AED " + mDeliveryCharges);
+//            tstTotalPrice.setText("AED " + mTotalPriceAMT);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    void PickupMethod() {
+        Log.e("in delivery click", "===" + "through pickup method");
+        mDeliveryMethod = "Pickup";
+        // tstDlCharge.setText("Delivery Charge: 0");
+        tstDlCharge.setText("AED 0");
+
+        mDeliveryCharges = 0;
+
+        if (Constant.TOTAL_AMOUNT_FOR_CHECKOUT > Constant.TOTAL_DISCOUNT_PRICE) {
+
+            mTotal_Discount = (Constant.TOTAL_AMOUNT_FOR_CHECKOUT * Constant.TOTAL_OFFER_PERCENTAGE) / 100;
+            mOfferDicountPrice = mTotal_Discount;
+            ADP_Price = Constant.TOTAL_AMOUNT_FOR_CHECKOUT - mTotal_Discount;
+            //mDeliveryCharges
+            // mTotalPriceAMT =  ADP_Price + mDeliveryCharges;
+            mTotalPriceAMT = ADP_Price;
+            tstTotalPrice.setText("AED " + mTotalPriceAMT);
+            //   Toast.makeText(mContext, " ADP_Price = "+ADP_Price + "\n mTotal_Discount = " + mTotal_Discount  , Toast.LENGTH_LONG).show();
+            //  calladdpaymentInfoAPI();
+        } else {
+            mOfferDicountPrice = 0;
+            tstTotalPrice.setText("AED " + Constant.TOTAL_PRICE);
+            mMinimumAmount = Constant.TOTAL_PRICE;
+            mTotalPriceAMT = Constant.TOTAL_PRICE;
+        }
+    }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void getLocationFromAddress(String strAddress) {
@@ -402,8 +610,8 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
                 mDate = edtInfoDate.getText().toString().trim();
                 mTime = edtInfoTime.getText().toString().trim();
                 if (checkValidate()) {
-
-                    if (Constant.TOTAL_PRICE > 500) {
+                    calladdpaymentInfoAPI();
+                  /*  if (Constant.TOTAL_PRICE > 500) {
 
                         if (Constant.TOTAL_AMOUNT_FOR_CHECKOUT > Constant.TOTAL_DISCOUNT_PRICE) {
 
@@ -433,43 +641,24 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
                             //  tstDlCharge.setText("AED " + mDeliveryCharges);
                         } else {
                             calladdpaymentInfoAPI();
-                        }
-                    } else {
-                        Toast.makeText(mContext, "Minimum order must be AED 500 and above.", Toast.LENGTH_LONG).show();
-                    }
+                        }*/
+                } else {
+                    Toast.makeText(mContext, "Please enter mandatory fields.", Toast.LENGTH_LONG).show();
+                }
 
                     /*if (Constant.TOTAL_PRICE > 500)
                         calladdpaymentInfoAPI();
                     else
                         Toast.makeText(mContext, "Minimum order must be AED 500 and above.", Toast.LENGTH_LONG).show();*/
-                }
 
-                /////this is for partial payment for order
-               /* mName = edtInfoName.getText().toString().trim();
-                //                mNameLast = edtInfoLastName.getText().toString().trim();
-                //                mEmail = edtInfoEmail.getText().toString().trim();
-                //                mMobile = edtInfoMobile.getText().toString().trim();
-                //                mAddress = edtInfoAddress.getText().toString().trim();
-                //                mPostalCode = edtPostalCode.getText().toString().trim();
-                //
-                //                mDate = edtInfoDate.getText().toString().trim();
-                //                mTime = edtInfoTime.getText().toString().trim();
-                //                //  mDeliveryMethod,mTime,mDate
-                //                mPaymentType = "Partial Payment";
-                //                // mPaymentType = "Partial Payment";
-                //                if (checkValidate()) {
-                //
-                //                    showAdvanceSearch();
-                //                    //calladdpaymentInfoAPI();
-                //                }
-                //                // showAdvanceSearch();*/
+
                 break;
             case R.id.tstFullPayment:
 
                 //   mPaymentType = "Cash on delivery";
                 mPaymentType = "Cash on Delivery";
-                // mMinimumAmount = Constant.TOTAL_AMOUNT_FOR_CHECKOUT;
-                mMinimumAmount = mTotalPriceAMT;
+
+                //  mMinimumAmount = mTotalPriceAMT;
                 mName = edtInfoName.getText().toString().trim();
                 mNameLast = edtInfoLastName.getText().toString().trim();
                 mEmail = edtInfoEmail.getText().toString().trim();
@@ -478,7 +667,54 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
                 mPostalCode = edtPostalCode.getText().toString().trim();
                 mDate = edtInfoDate.getText().toString().trim();
                 mTime = edtInfoTime.getText().toString().trim();
-                if (checkValidate()) {
+
+                if (mName == null || mName.equalsIgnoreCase("") || mName.equalsIgnoreCase("Null")) {
+                    edtInfoName.setError("Please enter first name");
+                   // return false;
+                } else if (mNameLast == null || mNameLast.equalsIgnoreCase("") || mNameLast.equalsIgnoreCase("Null")) {
+                    edtInfoLastName.setError("Please enter last name");
+                  //  return false;
+                }
+
+                else if (mMobile == null || mMobile.equalsIgnoreCase("") || mMobile.equalsIgnoreCase("Null")) {
+                    edtInfoMobile.setError("Please enter contact number");
+                  //  return false;
+                }
+                else if(!mDeliveryMethod.equalsIgnoreCase( "Pickup")){
+                    if (mAddress == null || mAddress.equalsIgnoreCase("") || mAddress.equalsIgnoreCase("Null")) {
+                        edtInfoAddress.setError("Please enter delivery address");
+                        //   return true;
+                    }
+                    else if (mDate == null || mDate.equalsIgnoreCase("") || mDate.equalsIgnoreCase("Null")) {
+                            edtInfoDate.setError("Please Select Date");
+                            //  return false;
+                        } else if (mTime == null || mTime.equalsIgnoreCase("") || mTime.equalsIgnoreCase("Null")) {
+                            edtInfoTime.setError("Please Select Time");
+                            //   return false;
+                        }else{
+                            calladdpaymentInfoAPI();
+                        }
+                    }
+
+
+                else if (mDate == null || mDate.equalsIgnoreCase("") || mDate.equalsIgnoreCase("Null")) {
+                    edtInfoDate.setError("Please Select Date");
+                  //  return false;
+                } else if (mTime == null || mTime.equalsIgnoreCase("") || mTime.equalsIgnoreCase("Null")) {
+                    edtInfoTime.setError("Please Select Time");
+                 //   return false;
+                }else{
+                    calladdpaymentInfoAPI();
+                }
+
+
+
+
+
+//                if (checkValidate()) {
+//                    calladdpaymentInfoAPI();
+
+
                     /*
                      Constant.MINIMUM_ORDER_OUTOF_ABU = galleryModel.getMinimumorderprice();
                 Constant.TOTAL_DISCOUNT_PRICE = galleryModel.getTotaldiscountprice();
@@ -486,7 +722,7 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
 
                  Constant.TOTAL_AMOUNT_FOR_CHECKOUT//////order Total order amount*/
 
-                    if (Constant.TOTAL_PRICE > 500) {
+                /*    if (Constant.TOTAL_PRICE >= 500) {
 
                         if (Constant.TOTAL_AMOUNT_FOR_CHECKOUT > Constant.TOTAL_DISCOUNT_PRICE) {
 
@@ -518,7 +754,7 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
                         } else {
                             calladdpaymentInfoAPI();
                         }
-                      /*  } else {
+                      *//*  } else {
                             if (dist > 50) {
                                 if (Constant.TOTAL_AMOUNT_FOR_CHECKOUT > Constant.MINIMUM_ORDER_OUTOF_ABU) {
 
@@ -535,12 +771,12 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
 
                             }
                             //  tstDlCharge.setText("AED " + mDeliveryCharges);
-                        }*/
+                        }*//*
 
 
                     } else {
                         Toast.makeText(mContext, "Minimum order must be AED 500 and above.", Toast.LENGTH_LONG).show();
-                    }
+                    }*/
 
                     /* if(Constant.TOTAL_PRICE > 500) {
                         calladdpaymentInfoAPI();
@@ -548,7 +784,9 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
                     else {
                         Toast.makeText(mContext, "Minimum order must be AED 500 and above.", Toast.LENGTH_LONG).show();
                     }*/
-                }
+//                } else {
+//                    Toast.makeText(mContext, "Please enter mandatory fields.", Toast.LENGTH_LONG).show();
+//                }
 
                 /////this is for full payment for order
                /* //   mMinimumAmount = Constant.TOTAL_AMOUNT_FOR_CHECKOUT;
@@ -600,19 +838,25 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
             case R.id.imgPlacePicker:
                 try {
                     // KeyboardUtil.hideSoftKeyboard(CheckOutActivity.this);
-                    PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
-//                    builder.setLatLngBounds(new LatLngBounds(new LatLng(35, 88), new LatLng(71, 173)));
-                    startActivityForResult(builder.build(CheckOutActivity.this), PLACE_PICKER_REQUEST);
+//                    PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+////                    builder.setLatLngBounds(new LatLngBounds(new LatLng(35, 88), new LatLng(71, 173)));
+//                    startActivityForResult(builder.build(CheckOutActivity.this), PLACE_PICKER_REQUEST);
+                    Intent intent = new Autocomplete.IntentBuilder(AutocompleteActivityMode.FULLSCREEN, fields).build(CheckOutActivity.this);
+                    startActivityForResult(intent, PLACE_PICKER_REQUEST);
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
                 break;
             case R.id.edtInfoAddress:
                 try {
+                    Intent intent = new Autocomplete.IntentBuilder(AutocompleteActivityMode.FULLSCREEN, fields).build(CheckOutActivity.this);
+                    startActivityForResult(intent, PLACE_PICKER_REQUEST);
+
                     // KeyboardUtil.hideSoftKeyboard(CheckOutActivity.this);
-                    PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
-//                    builder.setLatLngBounds(new LatLngBounds(new LatLng(35, 88), new LatLng(71, 173)));
-                    startActivityForResult(builder.build(CheckOutActivity.this), PLACE_PICKER_REQUEST);
+//                    PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+////                    builder.setLatLngBounds(new LatLngBounds(new LatLng(35, 88), new LatLng(71, 173)));
+//                    startActivityForResult(builder.build(CheckOutActivity.this), PLACE_PICKER_REQUEST);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -682,8 +926,52 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
         else if (mMobile == null || mMobile.equalsIgnoreCase("") || mMobile.equalsIgnoreCase("Null")) {
             edtInfoMobile.setError("Please enter contact number");
             return false;
-        } else if (mAddress == null || mAddress.equalsIgnoreCase("") || mAddress.equalsIgnoreCase("Null")) {
+        }
+        else if (mAddress == null || mAddress.equalsIgnoreCase("") || mAddress.equalsIgnoreCase("Null")) {
             edtInfoAddress.setError("Please enter delivery address");
+            return true;
+        }
+        else if (mDate == null || mDate.equalsIgnoreCase("") || mDate.equalsIgnoreCase("Null")) {
+            edtInfoDate.setError("Please Select Date");
+            return false;
+        } else if (mTime == null || mTime.equalsIgnoreCase("") || mTime.equalsIgnoreCase("Null")) {
+            edtInfoTime.setError("Please Select Time");
+            return false;
+        }
+       /* else if (mPostalCode == null || mPostalCode.equalsIgnoreCase("") || mPostalCode.equalsIgnoreCase("Null") )
+        {
+            edtPostalCode.setError("Please enter postal code");
+            return false;
+        }*/
+        else {
+            return true;
+        }
+        // return false;
+    }
+
+
+
+    private Boolean checkValidatewithoutAddres() {
+
+        if (mName == null || mName.equalsIgnoreCase("") || mName.equalsIgnoreCase("Null")) {
+            edtInfoName.setError("Please enter first name");
+            return false;
+        } else if (mNameLast == null || mNameLast.equalsIgnoreCase("") || mNameLast.equalsIgnoreCase("Null")) {
+            edtInfoLastName.setError("Please enter last name");
+            return false;
+        }
+        /*else if (mEmail == null || mEmail.equalsIgnoreCase("") || mEmail.equalsIgnoreCase("Null") )
+        {
+            edtInfoEmail.setError("Please enter email");
+            return false;
+        }
+        else if (!Validation.isValidEmail(mEmail))
+        {
+            edtInfoEmail.setError("Please enter valid email");
+            return false;
+        }*/
+        else if (mMobile == null || mMobile.equalsIgnoreCase("") || mMobile.equalsIgnoreCase("Null")) {
+            edtInfoMobile.setError("Please enter contact number");
             return false;
         } else if (mDate == null || mDate.equalsIgnoreCase("") || mDate.equalsIgnoreCase("Null")) {
             edtInfoDate.setError("Please Select Date");
@@ -702,6 +990,8 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
         }
         // return false;
     }
+
+
 
     ///////////////////current time....
 
@@ -1049,8 +1339,7 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
 
     private void calladdpaymentInfoAPI() {
 
-        if (mLat.length() > 0 && mLong.length() > 0) {
-
+   //     if (mLat.length() > 0 && mLong.length() > 0) {
 
             baseRequest.setBaseRequestListner(new RequestReciever() {
                 @Override
@@ -1121,8 +1410,11 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
 
                 jsonObject.addProperty("lat", mLat);
                 jsonObject.addProperty("lang", mLong);
-
-                jsonObject.addProperty("total_amount", mTotalPriceAMT);////////////new parametre
+                String totalamount = tstTotalPrice.getText().toString();
+                totalamount = totalamount.substring(3);
+             //  int k=Integer.parseInt(totalamount.trim());
+              // Log.e("Value",""+k);
+                jsonObject.addProperty("total_amount", totalamount);////////////new parametre
                 //   jsonObject.addProperty("postcode", mPostalCode);
                 jsonObject.addProperty("payment_type", mPaymentType);
                 jsonObject.addProperty("delivery_date", mDate);
@@ -1131,8 +1423,9 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
 
                 jsonObject.addProperty("discount_price", mOfferDicountPrice);  //////
                 //delivery_charge
-                jsonObject.addProperty("delivery_charge", mDeliveryCharges);////delivery_charge
 
+                jsonObject.addProperty("delivery_charge", mDeliveryCharges);////delivery_charge
+                Log.e("param ", "" + jsonObject.toString());
 
 //  mDeliveryMethod,mTime,mDate
            /*  jsonObject.addProperty(Enum.USER_PASSWORD, password);
@@ -1143,9 +1436,9 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
                 e.printStackTrace();
             }
             baseRequest.callAPIPost(1, jsonObject, Constant.GET_CART_CHECKOUT);/////
-        } else {
-            Toast.makeText(mContext, "Please select correct address.", Toast.LENGTH_SHORT).show();
-        }
+//        } else {
+//            Toast.makeText(mContext, "Please select correct address.", Toast.LENGTH_SHORT).show();
+//        }
     }
 
     //////////////////////////////////////////////
@@ -1308,6 +1601,7 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
         });
     }
 
+    @TargetApi(Build.VERSION_CODES.N)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -1333,17 +1627,48 @@ public class CheckOutActivity extends AppCompatActivity implements com.wdullaer.
             }
         } else if (requestCode == PLACE_PICKER_REQUEST)
             if (resultCode == RESULT_OK) {
-                Place place = PlacePicker.getPlace(data, this);
-                if (place != null) {
-                    LatLng latlang = place.getLatLng();
-                    mLat = latlang.latitude + "";
-                    mLong = latlang.longitude + "";
-                    edtInfoAddress.setText(place.getAddress());
-                    Log.e(TAG, "LatLng: >>" + mLat + ">>" + mLong);
+                Place place = Autocomplete.getPlaceFromIntent(data);
+
+
+                mLat = place.getLatLng().latitude + "";
+                mLong = place.getLatLng().longitude + "";
+                edtInfoAddress.setText(place.getName());
+
+                if (mDeliveryMethod.equalsIgnoreCase("Delivery")) {
+                    mAddress = edtInfoAddress.getText().toString().trim();
+
+                    if (mAddress == null || mAddress.equalsIgnoreCase("") || mAddress.equalsIgnoreCase("Null")) {
+                        edtInfoAddress.setError("Please enter delivery address.");
+
+//                    mRadioButtonDelivery.setEnabled(false);
+//                    mRadioButtonPicup.setEnabled(true);
+                        Toast.makeText(CheckOutActivity.this, "please enter adress", Toast.LENGTH_SHORT).show();
+                        mRadioButtonDelivery.setChecked(false);
+                        mRadioButtonPicup.setChecked(true);
+                    } else {
+                        mRadioButtonDelivery.setChecked(true);
+                        mRadioButtonPicup.setChecked(false);
+                        mDeliveryMethod = "Delivery";
+                        getLocationFromAddress(mAddress);
+                    }
                 }
             } else {
-                Toast.makeText(this, "Request Cancelled", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CheckOutActivity.this, "Request Cancelled", Toast.LENGTH_SHORT).show();
             }
+//        else if (requestCode == PLACE_PICKER_REQUEST)
+//            if (resultCode == RESULT_OK) {
+//                Place place = PlacePicker.getPlace(data, this);
+//                if (place != null) {
+//                    LatLng latlang = place.getLatLng();
+//                    mLat = latlang.latitude + "";
+//                    mLong = latlang.longitude + "";
+//                    edtInfoAddress.setText(place.getAddress());
+//                    Log.e(TAG, "LatLng: >>" + mLat + ">>" + mLong);
+//                }
+//            }
+        else {
+            Toast.makeText(this, "Request Cancelled", Toast.LENGTH_SHORT).show();
+        }
     }
 
     /////////////////////send nonec to server

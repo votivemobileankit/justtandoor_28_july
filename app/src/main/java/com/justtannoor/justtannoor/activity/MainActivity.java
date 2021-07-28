@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mSelectedBottomMenuIndex = -1;
         mTitleArr = getResources().getStringArray(R.array.bottom_menu);
 
-        loadHomeMenu();
+       loadHomeMenu();
         initBottomMenu();
         mOrderStatus = SharedPreferencesUtil.getData(mContext, Constant.PLACE_ORDER_STATUS);
 
@@ -169,8 +169,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             updateNotificationValue();
         }
 
+try {
+    setMyICON();
+}catch (Exception E){
+    E.printStackTrace();
+}
 
-        setMyICON();
     }
 
     @Override
@@ -431,6 +435,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             mSelectedBottomMenuIndex = -1;
         }
         Log.e("mSelectedIndex", "" + mSelectedIndex);
+
         handleFragmentChanges(mSelectedIndex);
         setSelectedButtomMenuItem(mSelectedIndex - 1);
 
@@ -439,8 +444,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void handleFragmentChanges(int aSelectedIndex) {
 
         Fragment curFragment = null;
+try {
+    setMyICON();
+}catch (Exception e){
 
-        setMyICON();
+}
+
+
 
         switch (aSelectedIndex) {
             case Constant.MENU_OPTION_HOME_INDEX:

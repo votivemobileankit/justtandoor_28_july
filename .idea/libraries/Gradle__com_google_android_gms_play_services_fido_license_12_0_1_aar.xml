@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-fido-license:12.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-fido-license-12.0.1.aar/4985fa657d408ae36094a592782b1d67/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-fido-license-12.0.1.aar/4985fa657d408ae36094a592782b1d67/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-fido-license-12.0.1.aar/0320dbba13d1dd4d950bb80c1a89d5c6/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/play-services-fido-license-12.0.1.aar/0320dbba13d1dd4d950bb80c1a89d5c6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-fido-license-12.0.1.aar/f3bcbb692a5e54e231b4ccd958999cad/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-fido-license-12.0.1.aar/f3bcbb692a5e54e231b4ccd958999cad/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-fido-license-12.0.1.aar/f3bcbb692a5e54e231b4ccd958999cad/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

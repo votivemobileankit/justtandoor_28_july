@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-appindexing:12.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-appindexing-12.0.1.aar/03eaee910510cee8928a9d1a506a17eb/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-appindexing-12.0.1.aar/03eaee910510cee8928a9d1a506a17eb/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/firebase-appindexing-12.0.1.aar/d3f23823763fa4edd95a0c56254d740c/res" />
+      <root url="jar://$PROJECT_DIR$/../StudioConfig/caches/transforms-1/files-1.1/firebase-appindexing-12.0.1.aar/d3f23823763fa4edd95a0c56254d740c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-appindexing-12.0.1.aar/b40b7a0cea6ef8219add7f23b9db6fc8/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-appindexing-12.0.1.aar/b40b7a0cea6ef8219add7f23b9db6fc8/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-appindexing-12.0.1.aar/b40b7a0cea6ef8219add7f23b9db6fc8/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
